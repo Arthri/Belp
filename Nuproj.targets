@@ -1,0 +1,12 @@
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <!-- Clear out build tasks -->
+    <!--
+      This needs to be in .targets because this property is not defined
+      in props and therefore will have no effect when done in .props
+    -->
+    <BuildDependsOn></BuildDependsOn>
+  </PropertyGroup>
+
+</Project>
