@@ -23,7 +23,7 @@
 
   <!-- Add placeholder file for target framework -->
   <ItemGroup>
-    <None Condition="'$(TargetFramework)' == 'netstandard2.0' And '$(DisableTFMPlaceholder)' != 'true'" Include="$(MSBuildThisFileDirectory)Assets/lib/netstandard2.0/_._" Pack="true" PackagePath="lib/netstandard2.0/" />
+    <None Condition="'$(DisableTFMPlaceholder)' != 'true'" Include="$(MSBuildThisFileDirectory)Assets/lib/_._" Pack="true" PackagePath="lib/$(TargetFramework)/" />
   </ItemGroup>
 
 </Project>
