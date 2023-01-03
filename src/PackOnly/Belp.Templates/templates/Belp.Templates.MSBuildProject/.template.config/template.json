@@ -1,0 +1,44 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "identity": "Belp.Templates.MSBuildProject",
+    "author": "Arthri",
+    "classifications": [
+        "MSBuild"
+    ],
+    "defaultName": "Project.proj",
+    "description": "Creates an MSBuild project, optionally with the specified SDK",
+    "name": "MSBuild Project Template",
+    "preferNameDirectory": false,
+    "shortName": [
+        "msbuildproj",
+        "proj"
+    ],
+    "sourceName": "Project.proj",
+    "sources": [
+        {
+            "source": "./Project",
+            "target": "./",
+            "condition": "SDK == ''"
+        },
+        {
+            "source": "./SDKProject",
+            "target": "./",
+            "condition": "SDK != ''"
+        }
+    ],
+    "symbols": {
+        "SDK": {
+            "type": "parameter",
+            "datatype": "text",
+            "defaultValue": "",
+            "description": "The SDK to import",
+            "displayName": "SDK",
+            "isEnabled": "true",
+            "isRequired": "false",
+            "replaces": "Microsoft.NET.Sdk"
+        }
+    },
+    "tags": {
+        "type": "item"
+    }
+}

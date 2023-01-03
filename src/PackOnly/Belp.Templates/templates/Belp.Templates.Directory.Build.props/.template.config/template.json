@@ -1,0 +1,15 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "identity": "Belp.Templates.Directory.Build.props",
+    "author": "Arthri",
+    "classifications": [
+        "MSBuild",
+        "Config"
+    ],
+    "description": "Creates a Directory.Build.props file which also imports higher-up Directory.Build.props",
+    "name": "Directory.Build.props Template",
+    "shortName": "dbprops",
+    "tags": {
+        "type": "item"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "identity": "Belp.Templates.Directory.Build.targets",
+    "author": "Arthri",
+    "classifications": [
+        "MSBuild",
+        "Config"
+    ],
+    "description": "Creates a Directory.Build.targets file which also imports higher-up Directory.Build.targets",
+    "name": "Directory.Build.targets Template",
+    "shortName": "dbtargets",
+    "tags": {
+        "type": "item"
+    }
+}
