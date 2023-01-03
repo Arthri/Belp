@@ -32,4 +32,11 @@
     <Product>Belp</Product>
   </PropertyGroup>
 
+
+
+  <!-- Pack any files and folders under Assets/ -->
+  <ItemGroup>
+    <None Include="Assets/**/*" Pack="true" PackagePath="./" />
+  </ItemGroup>
+
 </Project>
