@@ -19,4 +19,11 @@
     <BuildDependsOn Condition="'$(DisableDefaultBuild)' != 'false'"></BuildDependsOn>
   </PropertyGroup>
 
+
+
+  <!-- Add placeholder file for target framework -->
+  <ItemGroup>
+    <None Condition="'$(TargetFramework)' == 'netstandard2.0' And '$(DisableTFMPlaceholder)' != 'true'" Include="$(MSBuildThisFileDirectory)Assets/lib/netstandard2.0/_._" Pack="true" PackagePath="lib/netstandard2.0/" />
+  </ItemGroup>
+
 </Project>
