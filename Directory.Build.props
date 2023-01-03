@@ -37,6 +37,8 @@
   <ItemGroup>
     <!-- Pack any files and folders under Assets/ -->
     <None Include="Assets/**/*" Pack="true" PackagePath="./" />
+    <!-- Pack README.md beside .proj -->
+    <None Include="README.md" Condition="Exists('README.md')" Pack="true" PackagePath="./" />
   </ItemGroup>
 
 
