@@ -28,7 +28,7 @@ https://codingforsmarties.wordpress.com/2016/01/21/how-to-version-assemblies-des
 
 ### Install using .NET CLI
 1. Open a terminal
-1. Navigate to the project's `.csproj`
+1. Navigate to the project file; for example, `Project.csproj`, `Project.vbproj`, etc.
 1. Run `dotnet add package Belp.Build.Autoasmver`
 
 ## Usage
