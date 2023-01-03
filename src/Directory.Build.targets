@@ -9,14 +9,9 @@
 
 
 
-  <!-- Configure projects as Pack-only -->
-  <PropertyGroup>
-    <!-- Clear out build tasks -->
-    <!--
-      This needs to be in targets
-      because it is not yet set in props
-    -->
-    <BuildDependsOn Condition="'$(DisableDefaultBuild)' != 'false'"></BuildDependsOn>
-  </PropertyGroup>
+  <!-- Add placeholder file for target framework -->
+  <ItemGroup>
+    <None Condition="'$(EnableTFMPlaceholder)' == 'true'" Include="$(MSBuildThisFileDirectory)_._" Pack="true" PackagePath="lib/$(TargetFramework)/" />
+  </ItemGroup>
 
 </Project>
