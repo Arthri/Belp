@@ -16,7 +16,7 @@
       This needs to be in targets
       because it is not yet set in props
     -->
-    <BuildDependsOn></BuildDependsOn>
+    <BuildDependsOn Condition="'$(DisableDefaultBuild)' != 'false'"></BuildDependsOn>
   </PropertyGroup>
 
 </Project>
