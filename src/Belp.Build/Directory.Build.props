@@ -12,7 +12,7 @@
   <!-- Configure projects as Pack-only -->
   <PropertyGroup>
     <!-- Make Release the default and only configuration -->
-    <Configuration>Release</Configuration>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
     <Configurations>Release</Configurations>
 
     <EnableDefaultItems>false</EnableDefaultItems>
