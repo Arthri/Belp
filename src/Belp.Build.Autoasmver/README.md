@@ -2,6 +2,7 @@
 [![Project License](https://img.shields.io/badge/license-MIT--0-green?style=flat-square "License")](https://github.com/Arthri/Belp/blob/35dc43df571de970e89f186f14b2ada33b1b956c/LICENSE) [![NuGet](https://img.shields.io/nuget/v/Belp.Build.Autoasmver?style=flat-square "Latest NuGet Release")](https://www.nuget.org/packages/Belp.Build.Autoasmver/latest)
 
 Autoasmver automatically sets the assembly version to the latest major version. For example,
+
 | Package Version | Assembly Version |
 |-----------------|------------------|
 | 1.4.2           | 1.0.0.0          |
