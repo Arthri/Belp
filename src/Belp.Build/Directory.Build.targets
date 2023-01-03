@@ -9,7 +9,14 @@
 
 
 
-  <!-- targets for projects ending in .nuproj -->
-  <Import Condition="'$(MSBuildProjectExtension)' == '.nuproj'" Project="$(MSBuildThisFileDirectory)Nuproj.targets" />
+  <!-- Configure projects as Pack-only -->
+  <PropertyGroup>
+    <!-- Clear out build tasks -->
+    <!--
+      This needs to be in targets
+      because it is not yet set in props
+    -->
+    <BuildDependsOn></BuildDependsOn>
+  </PropertyGroup>
 
 </Project>

@@ -42,9 +42,4 @@
     <None Include="README.md" Condition="Exists('README.md')" Pack="true" PackagePath="./" />
   </ItemGroup>
 
-
-
-  <!-- props for projects ending in .nuproj -->
-  <Import Condition="'$(MSBuildProjectExtension)' == '.nuproj'" Project="$(MSBuildThisFileDirectory)Nuproj.props" />
-
 </Project>
