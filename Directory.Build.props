@@ -28,6 +28,7 @@
   <PropertyGroup>
     <Authors>Arthri</Authors>
     <PackageLicenseExpression>MIT-0</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/Arthri/Belp/</PackageProjectUrl>
     <Product>Belp</Product>
   </PropertyGroup>
 
