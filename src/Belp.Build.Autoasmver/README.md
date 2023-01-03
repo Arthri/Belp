@@ -31,6 +31,17 @@ https://codingforsmarties.wordpress.com/2016/01/21/how-to-version-assemblies-des
 1. Navigate to the project file; for example, `Project.csproj`, `Project.vbproj`, etc.
 1. Run `dotnet add package Belp.Build.Autoasmver`
 
+### Install directly to project
+1. Open the project file(for example, `Project.csproj`) to edit the XML
+1. Add the following XML directly under the root `<Project>` node
+  ```xml
+  <Target Name="SetAssemblyVersion" AfterTargets="GetAssemblyVersion">
+    <PropertyGroup>
+      <AssemblyVersion>$(AssemblyVersion.Remove($(AssemblyVersion.IndexOf('.')))).0.0.0</AssemblyVersion>
+    </PropertyGroup>
+  </Target>
+  ```
+
 ## Usage
 No input required
 
