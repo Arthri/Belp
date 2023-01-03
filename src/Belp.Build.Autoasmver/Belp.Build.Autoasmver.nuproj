@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Package Information -->
+  <PropertyGroup>
+    <Copyright>Copyright © 2022 Arthri</Copyright>
+    <Description>Automatically sets the assembly version to the last major version.</Description>
+    <DevelopmentDependency>true</DevelopmentDependency>
+    <PackageTags>msbuild;semver;semantic;version;versioning</PackageTags>
+    <Title>Auto Assembly Version</Title>
+  </PropertyGroup>
+
+</Project>
