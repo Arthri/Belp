@@ -1,0 +1,20 @@
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <!-- Clear out build tasks -->
+    <BuildDependsOn></BuildDependsOn>
+
+    <!-- Make Release the default and only configuration -->
+    <Configuration>Release</Configuration>
+    <Configurations>Release</Configurations>
+    
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+
+    <!-- Do not include build output in package -->
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+</Project>
