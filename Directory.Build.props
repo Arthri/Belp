@@ -34,8 +34,8 @@
 
 
 
-  <!-- Pack any files and folders under Assets/ -->
   <ItemGroup>
+    <!-- Pack any files and folders under Assets/ -->
     <None Include="Assets/**/*" Pack="true" PackagePath="./" />
   </ItemGroup>
 
