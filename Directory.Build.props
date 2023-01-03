@@ -29,6 +29,7 @@
     <Authors>Arthri</Authors>
     <PackageLicenseExpression>MIT-0</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/Arthri/Belp/</PackageProjectUrl>
+    <PackageReadmeFile Condition="Exists('README.md') Or Exists('Assets/README.md')">README.md</PackageReadmeFile>
     <Product>Belp</Product>
   </PropertyGroup>
 
