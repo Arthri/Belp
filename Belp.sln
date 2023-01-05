@@ -1,11 +1,11 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Belp.Build.Autoasmver", "src\PackOnly\Belp.Build.Autoasmver\Belp.Build.Autoasmver.csproj", "{825AEF95-4011-4642-8D7E-49A9FED946AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Belp.Build.Autoasmver", "pack\Belp.Build.Autoasmver\Belp.Build.Autoasmver.csproj", "{825AEF95-4011-4642-8D7E-49A9FED946AE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Belp.Templates", "src\PackOnly\Belp.Templates\Belp.Templates.csproj", "{8F6108FC-F01B-4BD0-8B79-78FBB9616613}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Belp.Templates", "pack\Belp.Templates\Belp.Templates.csproj", "{8F6108FC-F01B-4BD0-8B79-78FBB9616613}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

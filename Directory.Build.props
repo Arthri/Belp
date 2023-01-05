@@ -9,21 +9,6 @@
 
 
 
-  <!-- Build Configuration -->
-  <PropertyGroup>
-    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
-  </PropertyGroup>
-
-
-
-  <!-- Compiler Configuration -->
-  <PropertyGroup>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
-
-
-
   <!-- Package Information -->
   <PropertyGroup>
     <Authors>Arthri</Authors>
