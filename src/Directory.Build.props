@@ -11,7 +11,6 @@
 
   <!-- Build Configuration -->
   <PropertyGroup>
-    <EnableTFMPlaceholder>true</EnableTFMPlaceholder>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 

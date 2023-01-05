@@ -16,6 +16,7 @@
     <Configurations>Release</Configurations>
 
     <EnableDefaultItems>false</EnableDefaultItems>
+    <EnableTFMPlaceholder>true</EnableTFMPlaceholder>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 
     <!-- Do not include build output in package -->
