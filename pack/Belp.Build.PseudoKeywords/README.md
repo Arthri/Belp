@@ -121,6 +121,7 @@ Console.WriteLine(2);   // 2
 
 ### Get Random Number
 Brief explanation of [Interval Notation](https://en.wikipedia.org/wiki/Interval_(mathematics)):
+
 $$
 \begin{flalign}
 (a, b) &= \\{ x \in \mathbb{R} \mid a \lt x \lt b \\} && \\
