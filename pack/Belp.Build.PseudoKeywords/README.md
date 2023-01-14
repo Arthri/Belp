@@ -232,5 +232,12 @@ Console.WriteLine(rnextelement(array));
 Console.WriteLine(rnextelement(array, out int index));
 ```
 
+### Math Literals
+```cs
+Console.WriteLine(φ); // 1.6180339887498948
+Console.WriteLine(π); // Math.PI
+Console.WriteLine(τ); // Math.Tau
+```
+
 ## License
 This work is licensed under [MIT](https://github.com/Arthri/Belp/blob/02b63f4be263d747f3078a0568bf235bf021d0cd/LICENSE).
