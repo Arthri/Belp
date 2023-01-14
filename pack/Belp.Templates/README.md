@@ -1,5 +1,5 @@
 # Belp.Templates
-[![Project License](https://img.shields.io/badge/license-MIT--0-green?style=flat-square "License")](https://github.com/Arthri/Belp/blob/35dc43df571de970e89f186f14b2ada33b1b956c/LICENSE) [![Latest NuGet Release](https://img.shields.io/nuget/v/Belp.Templates?style=flat-square "Latest NuGet Release")](https://www.nuget.org/packages/Belp.Templates/latest)
+[![Project License](https://img.shields.io/badge/license-MIT-green?style=flat-square "License")](https://github.com/Arthri/Belp/blob/02b63f4be263d747f3078a0568bf235bf021d0cd/LICENSE) [![Latest NuGet Release](https://img.shields.io/nuget/v/Belp.Templates?style=flat-square "Latest NuGet Release")](https://www.nuget.org/packages/Belp.Templates/latest)
 
 Provides templates for MSBuild projects and other files
 

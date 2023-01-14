@@ -1,5 +1,5 @@
 # Belp.Build.Autoasmver
-[![Project License](https://img.shields.io/badge/license-MIT--0-green?style=flat-square "License")](https://github.com/Arthri/Belp/blob/35dc43df571de970e89f186f14b2ada33b1b956c/LICENSE) [![Latest NuGet Release](https://img.shields.io/nuget/v/Belp.Build.Autoasmver?style=flat-square "Latest NuGet Release")](https://www.nuget.org/packages/Belp.Build.Autoasmver/latest)
+[![Project License](https://img.shields.io/badge/license-MIT-green?style=flat-square "License")](https://github.com/Arthri/Belp/blob/02b63f4be263d747f3078a0568bf235bf021d0cd/LICENSE) [![Latest NuGet Release](https://img.shields.io/nuget/v/Belp.Build.Autoasmver?style=flat-square "Latest NuGet Release")](https://www.nuget.org/packages/Belp.Build.Autoasmver/latest)
 
 Autoasmver automatically sets the assembly version to the latest major version. For example,
 
@@ -46,4 +46,4 @@ https://codingforsmarties.wordpress.com/2016/01/21/how-to-version-assemblies-des
 No input required
 
 ## License
-This work is licensed under [MIT-0](https://github.com/Arthri/Belp/blob/35dc43df571de970e89f186f14b2ada33b1b956c/LICENSE)
+This work is licensed under [MIT](https://github.com/Arthri/Belp/blob/02b63f4be263d747f3078a0568bf235bf021d0cd/LICENSE)

@@ -24,4 +24,4 @@ Belp is a collection of build tools and extensions for MSBuild
 - Install .NET 7.0 SDK version 7.0.100 or newer
 
 ## License
-This work is licensed under [MIT-0](https://github.com/Arthri/Belp/blob/35dc43df571de970e89f186f14b2ada33b1b956c/LICENSE)
+This work is licensed under [MIT](https://github.com/Arthri/Belp/blob/02b63f4be263d747f3078a0568bf235bf021d0cd/LICENSE)
