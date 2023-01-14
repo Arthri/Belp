@@ -17,6 +17,11 @@ internal static partial class MathLiterals
 
 #pragma warning disable IDE1006 // Naming Styles
 
+    /// <summary>
+    /// Gets the golden ratio.
+    /// </summary>
+    public const double φ = 1.6180339887498948;
+
     /// <inheritdoc cref="Math.PI" />
     public const double π = Math.PI;
 
