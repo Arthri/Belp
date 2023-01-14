@@ -206,6 +206,12 @@ Console.WriteLine(rnextint64(16));          // Random long in [0, 16)
 Console.WriteLine(rnext(120, 160));         // Random long in [120, 160)
 Console.WriteLine(rnextlong(120, 160));     // Random long in [120, 160)
 Console.WriteLine(rnextint64(120, 160));    // Random long in [120, 160)
+Console.WriteLine(rnext(16L));               // Random long in [0, 16)
+Console.WriteLine(rnextlong(16L));           // Random long in [0, 16)
+Console.WriteLine(rnextint64(16L));          // Random long in [0, 16)
+Console.WriteLine(rnext(120L, 160L));         // Random long in [120, 160)
+Console.WriteLine(rnextlong(120L, 160L));     // Random long in [120, 160)
+Console.WriteLine(rnextint64(120L, 160L));    // Random long in [120, 160)
 ```
 
 ### Get Random Index
