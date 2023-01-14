@@ -8,19 +8,19 @@ Provides templates for MSBuild projects and other files.
 ### Directory.Build.props
 Short Name: `dbprops`
 
-#### Parameters
+#### Options
 None
 
 ### Directory.Build.targets
 Short Name: `dbtargets`
 
-#### Parameters
+#### Options
 None
 
 ### MSBuild Project
 Short Names: `proj`, `msbuildproj`
 
-#### Parameters
+#### Options
 - `--sdk <sdk>` (Optional): Specifies the SDK to put in `<Project Sdk="...">`.
 
 ## Installation
