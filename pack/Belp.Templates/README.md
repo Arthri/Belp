@@ -51,3 +51,6 @@ Short Names: `proj`, `msbuildproj`
 
 ### Use from Visual Studio
 Not supported and not available
+
+## License
+This work is licensed under [MIT](https://github.com/Arthri/Belp/blob/02b63f4be263d747f3078a0568bf235bf021d0cd/LICENSE)
