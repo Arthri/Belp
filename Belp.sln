@@ -1,4 +1,4 @@
-
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
@@ -6,6 +6,8 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Belp.Build.Autoasmver", "pack\Belp.Build.Autoasmver\Belp.Build.Autoasmver.csproj", "{825AEF95-4011-4642-8D7E-49A9FED946AE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Belp.Templates", "pack\Belp.Templates\Belp.Templates.csproj", "{8F6108FC-F01B-4BD0-8B79-78FBB9616613}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Belp.Build.PseudoKeywords", "pack\Belp.Build.PseudoKeywords\Belp.Build.PseudoKeywords.csproj", "{34F43422-4EA7-42C1-AB08-9BC622DCE061}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{8F6108FC-F01B-4BD0-8B79-78FBB9616613}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{8F6108FC-F01B-4BD0-8B79-78FBB9616613}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F6108FC-F01B-4BD0-8B79-78FBB9616613}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34F43422-4EA7-42C1-AB08-9BC622DCE061}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{34F43422-4EA7-42C1-AB08-9BC622DCE061}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{34F43422-4EA7-42C1-AB08-9BC622DCE061}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34F43422-4EA7-42C1-AB08-9BC622DCE061}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

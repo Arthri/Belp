@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Build Configuration -->
+  <PropertyGroup>
+    <DisableDefaultBuild>false</DisableDefaultBuild>
+    <TargetFramework>net7.0</TargetFramework>
+  </PropertyGroup>
+
+
+
+  <!-- Package Information -->
+  <PropertyGroup>
+    <Copyright>Copyright © 2022 Arthri</Copyright>
+    <Description>Adds new language keywords through global usings.</Description>
+    <DevelopmentDependency>true</DevelopmentDependency>
+    <PackageTags>csharp;keyword</PackageTags>
+    <Title>Pseudo Keywords</Title>
+    <Version>1.0.0.0</Version>
+  </PropertyGroup>
+
+
+
+  <!-- Compile and pack C# files -->
+  <ItemGroup>
+    <Compile Include="**/*.cs" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" Pack="true" />
+  </ItemGroup>
+
+</Project>
