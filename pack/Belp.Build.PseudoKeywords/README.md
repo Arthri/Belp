@@ -29,37 +29,37 @@ This project is not meant to be used seriously; it is merely a proof of concept.
 ### Type Aliases
 ```cs
 // Integer Types
-Console.WriteLine(typeof(int8));        // Corresponds to System.SByte
-Console.WriteLine(typeof(uint8));       // Corresponds to System.Byte
-Console.WriteLine(typeof(int16));       // Corresponds to System.Int16
-Console.WriteLine(typeof(uint16));      // Corresponds to System.UInt16
-Console.WriteLine(typeof(int32));       // Corresponds to System.Int32
-Console.WriteLine(typeof(uint32));      // Corresponds to System.UInt32
-Console.WriteLine(typeof(int64));       // Corresponds to System.Int64
-Console.WriteLine(typeof(uint64));      // Corresponds to System.UInt64
+Console.WriteLine(typeof(int8));        // Alias for System.SByte
+Console.WriteLine(typeof(uint8));       // Alias for System.Byte
+Console.WriteLine(typeof(int16));       // Alias for System.Int16
+Console.WriteLine(typeof(uint16));      // Alias for System.UInt16
+Console.WriteLine(typeof(int32));       // Alias for System.Int32
+Console.WriteLine(typeof(uint32));      // Alias for System.UInt32
+Console.WriteLine(typeof(int64));       // Alias for System.Int64
+Console.WriteLine(typeof(uint64));      // Alias for System.UInt64
 
 // Floating-Point Types
-Console.WriteLine(typeof(half));        // Corresponds to System.Half
-Console.WriteLine(typeof(fp16));        // Corresponds to System.Half
-Console.WriteLine(typeof(float16));     // Corresponds to System.Half
-Console.WriteLine(typeof(single));      // Corresponds to System.Single
-Console.WriteLine(typeof(fp32));        // Corresponds to System.Single
-Console.WriteLine(typeof(float32));     // Corresponds to System.Single
-Console.WriteLine(typeof(fp64));        // Corresponds to System.Double
-Console.WriteLine(typeof(float64));     // Corresponds to System.Double
+Console.WriteLine(typeof(half));        // Alias for System.Half
+Console.WriteLine(typeof(fp16));        // Alias for System.Half
+Console.WriteLine(typeof(float16));     // Alias for System.Half
+Console.WriteLine(typeof(single));      // Alias for System.Single
+Console.WriteLine(typeof(fp32));        // Alias for System.Single
+Console.WriteLine(typeof(float32));     // Alias for System.Single
+Console.WriteLine(typeof(fp64));        // Alias for System.Double
+Console.WriteLine(typeof(float64));     // Alias for System.Double
 
 // Other Numeric Types
-Console.WriteLine(typeof(bigint));      // Corresponds to System.Numerics.BigInteger
-Console.WriteLine(typeof(complex));     // Corresponds to System.Numerics.Complex
+Console.WriteLine(typeof(bigint));      // Alias for System.Numerics.BigInteger
+Console.WriteLine(typeof(complex));     // Alias for System.Numerics.Complex
 
 // Temporal Types
-Console.WriteLine(typeof(datetime));    // Corresponds to System.DateTime
-Console.WriteLine(typeof(date));        // Corresponds to System.DateOnly
-Console.WriteLine(typeof(time));        // Corresponds to System.TimeOnly
-Console.WriteLine(typeof(timespan));    // Corresponds to System.TimeSpan
+Console.WriteLine(typeof(datetime));    // Alias for System.DateTime
+Console.WriteLine(typeof(date));        // Alias for System.DateOnly
+Console.WriteLine(typeof(time));        // Alias for System.TimeOnly
+Console.WriteLine(typeof(timespan));    // Alias for System.TimeSpan
 
 // Other Types
-Console.WriteLine(typeof(boolean));     // Corresponds to System.Boolean
+Console.WriteLine(typeof(boolean));     // Alias for System.Boolean
 ```
 ```cs
 long num = 45L;
