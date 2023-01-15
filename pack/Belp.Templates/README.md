@@ -3,7 +3,7 @@
 
 Provides templates for MSBuild projects and other files.
 
-## Available Templates
+## Available Item Templates
 
 ### Directory.Build.props
 Short Name: `dbprops`
@@ -22,6 +22,9 @@ Short Names: `msbuildproj`
 
 #### Options
 - `--sdk <sdk>` (Optional): Specifies the SDK to put in `<Project Sdk="...">`.
+
+## Available Project Templates
+None
 
 ## Installation
 
