@@ -50,7 +50,12 @@ Short Names: `msbuildproj`
 1. Run `dotnet new <Desired Template>`. For example, `dotnet new dbprops` to create a new Directory.Build.props file.
 
 ### Use from Visual Studio
-Not supported and not available.
+> **Note**: only project templates can be used from Visual Studio at the moment.
+
+1. Open Visual Studio 2022 or later.
+1. Click on "Create a new project".
+1. Find the desired project template.
+1. Fill out the requested fields.
 
 ## License
 This work is licensed under [MIT](https://github.com/Arthri/Belp/blob/02b63f4be263d747f3078a0568bf235bf021d0cd/LICENSE).
