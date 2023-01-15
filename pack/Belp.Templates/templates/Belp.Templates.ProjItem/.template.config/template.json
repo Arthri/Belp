@@ -1,12 +1,12 @@
 {
     "$schema": "http://json.schemastore.org/template",
-    "identity": "Belp.Templates.MSBuildProject",
+    "identity": "Belp.Templates.ProjItem",
     "author": "Arthri",
     "classifications": [
         "MSBuild"
     ],
     "defaultName": "Project.proj",
-    "description": "Creates an MSBuild project, optionally with the specified SDK",
+    "description": "Creates an MSBuild project as an item, optionally with the specified SDK",
     "name": "MSBuild Project Template",
     "preferNameDirectory": false,
     "shortName": [
