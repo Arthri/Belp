@@ -6,11 +6,10 @@
         "MSBuild"
     ],
     "defaultName": "Project.proj",
-    "description": "Creates an MSBuild project as an item, optionally with the specified SDK",
-    "name": "MSBuild Project Template",
+    "description": "Creates a .proj, optionally with the specified SDK",
+    "name": ".Proj Item Template",
     "preferNameDirectory": false,
     "shortName": [
-        "msbuildproj",
         "proj"
     ],
     "sourceName": "Project.proj",
