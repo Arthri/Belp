@@ -18,7 +18,7 @@ Short Name: `dbtargets`
 None
 
 ### Project Item
-Short Names: `msbuildproj`
+Short Name: `proj`
 
 #### Options
 - `--sdk <sdk>` (Optional): Specifies the SDK to put in `<Project Sdk="...">`.
