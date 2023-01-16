@@ -106,7 +106,7 @@ Console.WriteLine(nameofexpr(num)); // Prints num
 Console.WriteLine(nameofexpr((int a, string b) => 3f)); // Prints (int a, string b) => 3f
 ```
 
-## `Console.Write` and `Console.WriteLine` Aliases
+### `Console.Write` and `Console.WriteLine` Aliases
 ```cs
 print(2);
 write(2);
