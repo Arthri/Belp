@@ -120,16 +120,7 @@ Console.WriteLine(2);   // 2
 ```
 
 ### Get Random Number
-Brief explanation of [Interval Notation](https://en.wikipedia.org/wiki/Interval_(mathematics)):
-
-$$
-\begin{flalign}
-(a, b) &= \\{ x \in \mathbb{R} \mid a \lt x \lt b \\} && \\
-[a, b) &= \\{ x \in \mathbb{R} \mid a \le x \lt b \\} && \\
-(a, b] &= \\{ x \in \mathbb{R} \mid a \lt x \le b \\} && \\
-[a, b] &= \\{ x \in \mathbb{R} \mid a \le x \le b \\} && \\
-\end{flalign}
-$$
+Brief explanation of Interval Notation available [here](https://en.wikipedia.org/wiki/Interval_(mathematics)).
 
 ```cs
 // Inclusive-Inclusive Integers
