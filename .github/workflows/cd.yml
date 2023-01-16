@@ -1,0 +1,35 @@
+name: CD
+
+on:
+  push:
+    branches:
+      - release/nuget/*
+
+  workflow_dispatch:
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  release_nuget:
+    environment: Release (NuGet)
+
+    runs-on: ubuntu-20.04
+    timeout-minutes: 2
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+
+      - name: Build Project
+        id: build
+        run: dotnet build ./${GITHUB_REF##refs/heads/release/nuget/} -warnaserror -c Release
+
+      - name: Publish Package
+        env:
+          NUGET_TOKEN: ${{ secrets.NUGET_TOKEN }}
+        run: dotnet nuget push ${{ steps.build.outputs.PACKAGE_OUTPUT_PATH }}*.nupkg -k "$NUGET_TOKEN" -s "https://api.nuget.org/v3/index.json"
