@@ -16,6 +16,19 @@
 
 
 
+  <!-- Automatically clears cache and pushes to local NuGet source  -->
+  <Target Name="_ClearNuGetCacheAndPushLocal" Condition="'$(DevelopmentNuGet)' == 'true'" AfterTargets="Pack">
+    <Error Condition="'$(NuGetPackageRoot)' == ''" Text="NuGetPackageRoot is empty" />
+    <RemoveDir Directories="$(NuGetPackageRoot)\$(PackageId.ToLower())" />
+
+    <ItemGroup>
+      <_NuGetPackages Include="@(NuGetPackOutput)" Condition="'%(Extension)' == '.nupkg'" />
+    </ItemGroup>
+    <Exec LogStandardErrorAsError="true" StandardOutputImportance="High" Command="dotnet nuget push &quot;@(_NuGetPackages, '&quot; &quot;')&quot; -s tmp" />
+  </Target>
+
+
+
   <!-- Emit PackageOutputPath for GitHub Actions to use -->
   <Target Name="_OutputPackageOutputPath" AfterTargets="Pack" Condition="'$(GITHUB_OUTPUT)' != ''">
     <WriteLinesToFile File="$(GITHUB_OUTPUT)" Lines="PACKAGE_OUTPUT_PATH=$(PackageOutputAbsolutePath)" />
