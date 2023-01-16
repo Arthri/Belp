@@ -2,7 +2,9 @@
 
   <!-- Hide package source files from project tree -->
   <ItemGroup>
-    <Compile Update="@(Compile)" Condition="'%(NuGetPackageId)' == 'Belp.Build.PseudoKeywords'" Visible="false" />
+    <Compile Update="@(Compile)">
+      <Visible Condition="'%(NuGetPackageId)' == 'Belp.Build.PseudoKeywords'">false</Visible>
+    </Compile>
   </ItemGroup>
 
 
