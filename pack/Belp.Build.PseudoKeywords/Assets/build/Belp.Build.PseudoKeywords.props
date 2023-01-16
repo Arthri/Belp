@@ -2,45 +2,9 @@
 
   <!-- Hide package source files from project tree -->
   <ItemGroup>
-    <Compile Update="@(Compile)" Condition="'%(NuGetPackageId)' == 'Belp.Build.PseudoKeywords'" Visible="false" />
-  </ItemGroup>
-
-
-
-  <!-- Additional Type Keywords -->
-  <ItemGroup>
-    <!-- Integer Types -->
-    <Using Include="System.SByte" Alias="int8" />
-    <Using Include="System.Byte" Alias="uint8" />
-    <Using Include="System.Int16" Alias="int16" />
-    <Using Include="System.UInt16" Alias="uint16" />
-    <Using Include="System.Int32" Alias="int32" />
-    <Using Include="System.UInt32" Alias="uint32" />
-    <Using Include="System.Int64" Alias="int64" />
-    <Using Include="System.UInt64" Alias="uint64" />
-
-    <!-- Floating-Point Types -->
-    <Using Include="System.Half" Alias="half" />
-    <Using Include="System.Half" Alias="fp16" />
-    <Using Include="System.Half" Alias="float16" />
-    <Using Include="System.Single" Alias="single" />
-    <Using Include="System.Single" Alias="fp32" />
-    <Using Include="System.Single" Alias="float32" />
-    <Using Include="System.Double" Alias="fp64" />
-    <Using Include="System.Double" Alias="float64" />
-
-    <!-- Other Numeric Types -->
-    <Using Include="System.Numerics.BigInteger" Alias="bigint" />
-    <Using Include="System.Numerics.Complex" Alias="complex" />
-
-    <!-- Temporal Types -->
-    <Using Include="System.DateTime" Alias="datetime" />
-    <Using Include="System.DateOnly" Alias="date" />
-    <Using Include="System.TimeOnly" Alias="time" />
-    <Using Include="System.TimeSpan" Alias="timespan" />
-
-    <!-- Other Types -->
-    <Using Include="System.Boolean" Alias="boolean" />
+    <Compile Update="@(Compile)">
+      <Visible Condition="'%(NuGetPackageId)' == 'Belp.Build.PseudoKeywords'">false</Visible>
+    </Compile>
   </ItemGroup>
 
 </Project>
