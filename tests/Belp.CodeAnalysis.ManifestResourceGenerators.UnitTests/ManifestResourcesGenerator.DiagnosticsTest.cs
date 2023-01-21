@@ -1,4 +1,4 @@
-﻿using Microsoft.CodeAnalysis.Testing;
+using Microsoft.CodeAnalysis.Testing;
 using SGTest = Belp.Tests.CSharpIncrementalSourceGeneratorVerifier<Belp.CodeAnalysis.ManifestResourceGenerators.ManifestResourcesGenerator>.Test;
 
 namespace Belp.CodeAnalysis.ManifestResourceGenerators.UnitTests;
@@ -39,7 +39,7 @@ public partial class ManifestResourcesGenerator
                 {
                     AdditionalFiles =
                     {
-                        ("/File.txt", ""),
+                        ("/File.txt.", ""),
                     },
                     AnalyzerConfigFiles =
                     {
