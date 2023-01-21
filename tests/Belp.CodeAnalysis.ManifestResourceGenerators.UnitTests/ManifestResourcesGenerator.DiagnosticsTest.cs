@@ -1,4 +1,4 @@
-﻿using Microsoft.CodeAnalysis.Testing;
+using Microsoft.CodeAnalysis.Testing;
 using SGTest = Belp.CodeAnalysis.ManifestResourceGenerators.UnitTests.CSharpIncrementalSourceGeneratorVerifier<Belp.CodeAnalysis.ManifestResourceGenerators.ManifestResourcesGenerator>.Test;
 
 namespace Belp.CodeAnalysis.ManifestResourceGenerators.UnitTests;
@@ -13,7 +13,7 @@ public partial class ManifestResourcesGenerator
         }
 
         [Fact]
-        public Task When_AssemblyName_eq_nullX2C_then_expect_CS8203_and_MRG4001()
+        public Task When_AssemblyName_eq_nullX2C_expect_CS8203_and_MRG4001()
         {
             var test = new EmptyProjectNameTest
             {
@@ -33,7 +33,7 @@ public partial class ManifestResourcesGenerator
         }
 
         [Fact]
-        public Task When_ResourceName_ends_with_X22X2EX22X2C_then_expect_MRGN4002()
+        public Task When_ResourceName_ends_with_X22X2EX22X2C_expect_MRGN4002()
         {
             var test = new SGTest
             {
