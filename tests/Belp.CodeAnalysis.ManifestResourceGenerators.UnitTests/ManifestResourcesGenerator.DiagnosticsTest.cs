@@ -17,8 +17,6 @@ public partial class ManifestResourcesGenerator
         {
             var test = new EmptyProjectNameTest
             {
-                ReferenceAssemblies = ReferenceAssemblies.NetStandard.NetStandard20,
-
                 TestState =
                 {
                     ExpectedDiagnostics =
@@ -37,8 +35,6 @@ public partial class ManifestResourcesGenerator
         {
             var test = new SGTest
             {
-                ReferenceAssemblies = ReferenceAssemblies.NetStandard.NetStandard20,
-
                 TestState =
                 {
                     AdditionalFiles =

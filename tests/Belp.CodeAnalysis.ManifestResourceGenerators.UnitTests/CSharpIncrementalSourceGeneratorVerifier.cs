@@ -13,6 +13,11 @@ internal class CSharpIncrementalSourceGeneratorVerifier<TSourceGenerator>
     {
         public LanguageVersion LanguageVersion { get; init; } = LanguageVersion.CSharp10;
 
+        public Test()
+        {
+            ReferenceAssemblies = ReferenceAssemblies.NetStandard.NetStandard20;
+        }
+
         /// <inheritdoc />
         protected override IEnumerable<ISourceGenerator> GetSourceGenerators()
         {
