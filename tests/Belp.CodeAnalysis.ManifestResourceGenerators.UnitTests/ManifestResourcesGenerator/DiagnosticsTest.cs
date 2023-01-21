@@ -11,7 +11,7 @@ public class DiagnosticsTest
     }
 
     [Fact]
-    public async Task AssemblyName_eq_null_Errors()
+    public Task AssemblyName_eq_null_Errors()
     {
         var test = new EmptyProjectNameTest
         {
@@ -24,6 +24,6 @@ public class DiagnosticsTest
             },
         };
 
-        await test.RunAsync();
+        return test.RunAsync();
     }
 }
