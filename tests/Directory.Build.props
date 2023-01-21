@@ -26,8 +26,9 @@
 
   <!-- Add Global Usings -->
   <ItemGroup>
-    <Using Include="Xunit" />
     <Using Include="FluentAssertions" />
+    <Using Include="Microsoft.CodeAnalysis.Testing" />
+    <Using Include="Xunit" />
   </ItemGroup>
 
 
