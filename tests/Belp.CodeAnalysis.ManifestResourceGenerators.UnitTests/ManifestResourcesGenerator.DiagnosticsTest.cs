@@ -46,7 +46,7 @@ public partial class ManifestResourcesGenerator
                         (
                             "/.editorconfig",
                             """
-                            [/File.txt]
+                            [/File.txt.]
                             build_metadata.AdditionalFiles.ManifestResourceName = File.txt.
                             build_metadata.AdditionalFiles.TargetSourceGenerator = ManifestResourcesGenerator
                             """
