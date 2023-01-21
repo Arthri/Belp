@@ -6,7 +6,7 @@
     <Copyright>Copyright © 2022 Arthri</Copyright>
     <Description>Helper source generators for manifest or embedded resources.</Description>
     <DevelopmentDependency>true</DevelopmentDependency>
-    <PackageId>ManifestResourceGenerators</PackageId>
+    <PackageId>Belp.CodeAnalysis.ManifestResourceGenerators</PackageId>
     <PackageTags>analyzers;csharp;codeanalysis;compiler;embedded;manifest;resource;sourcegenerator</PackageTags>
     <Title>Manifest Resource Source Generators</Title>
     <Version>0.0.1</Version>
@@ -65,7 +65,7 @@
     <Using Include="Microsoft.CodeAnalysis.CSharp" />
     <Using Include="Microsoft.CodeAnalysis.CSharp.Syntax" />
     <Using Include="Microsoft.CodeAnalysis.CSharp.SyntaxFactory" Static="true" />
-    <Using Include="ManifestResourceGenerators.Extensions" />
+    <Using Include="Belp.CodeAnalysis.ManifestResourceGenerators.Extensions" />
   </ItemGroup>
 
 

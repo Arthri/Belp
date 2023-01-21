@@ -3,7 +3,7 @@ using System.Collections.Immutable;
 using System.Diagnostics.CodeAnalysis;
 using System.Text;
 
-namespace ManifestResourceGenerators;
+namespace Belp.CodeAnalysis.ManifestResourceGenerators;
 
 /// <summary>
 /// Provides the generation of strongly typed manifest resource names.

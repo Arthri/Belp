@@ -1,4 +1,4 @@
-﻿namespace ManifestResourceGenerators.Extensions;
+﻿namespace Belp.CodeAnalysis.ManifestResourceGenerators.Extensions;
 
 /// <summary>
 /// Provides extensions for <see cref="KeyValuePair{TKey, TValue}"/>.

@@ -1,4 +1,4 @@
-﻿namespace ManifestResourceGenerators;
+﻿namespace Belp.CodeAnalysis.ManifestResourceGenerators;
 
 /// <summary>
 /// Provides diagnostic descriptors.

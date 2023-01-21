@@ -5,8 +5,8 @@
 
 Rule ID | Category | Severity | Notes
 --------|----------|----------|-------
-MRG4001 | ManifestResourceGenerators.UserError | Error | SourceGenerators
-MRGN4002 | ManifestResourceGenerators.UserError | Error | ManifestResourcesGenerator
-MRGN4003 | ManifestResourceGenerators.UserError | Error | ManifestResourcesGenerator
-MRGN4004 | ManifestResourceGenerators.UserError | Error | ManifestResourcesGenerator
-MRGN4005 | ManifestResourceGenerators.UserError | Error | ManifestResourcesGenerator
+MRG4001 | Belp.CodeAnalysis.ManifestResourceGenerators.UserError | Error | SourceGenerators
+MRGN4002 | Belp.CodeAnalysis.ManifestResourceGenerators.UserError | Error | ManifestResourcesGenerator
+MRGN4003 | Belp.CodeAnalysis.ManifestResourceGenerators.UserError | Error | ManifestResourcesGenerator
+MRGN4004 | Belp.CodeAnalysis.ManifestResourceGenerators.UserError | Error | ManifestResourcesGenerator
+MRGN4005 | Belp.CodeAnalysis.ManifestResourceGenerators.UserError | Error | ManifestResourcesGenerator

@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace ManifestResourceGenerators;
+namespace Belp.CodeAnalysis.ManifestResourceGenerators;
 
 /// <summary>
 /// Wraps a specified list for better equality checks.

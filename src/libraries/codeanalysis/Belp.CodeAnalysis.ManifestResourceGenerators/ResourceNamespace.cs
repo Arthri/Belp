@@ -1,4 +1,4 @@
-﻿namespace ManifestResourceGenerators;
+﻿namespace Belp.CodeAnalysis.ManifestResourceGenerators;
 
 /// <summary>
 /// Represents collected resources under a namespace.
