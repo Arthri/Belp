@@ -5,7 +5,7 @@ namespace Belp.CodeAnalysis.ManifestResourceGenerators.UnitTests;
 
 public partial class ManifestResourcesGenerator
 {
-    public partial class DiagnosticsTest
+    public partial class Diagnostics
     {
         private class EmptyProjectNameTest : SGTest
         {
