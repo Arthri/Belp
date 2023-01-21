@@ -16,8 +16,16 @@
 
 
 
+  <!-- Compiler Configuration -->
+  <PropertyGroup>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+
+
   <!-- Update Global Usings -->
-  <ItemGroup Condition="'$(ImplicitUsings)' == 'true' Or '$(ImplicitUsings)' == 'enable'">
+  <ItemGroup>
     <Using Include="Xunit" />
     <Using Include="FluentAssertions" />
   </ItemGroup>
