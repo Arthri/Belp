@@ -19,11 +19,14 @@ public partial class ManifestResourcesGenerator
             {
                 ReferenceAssemblies = ReferenceAssemblies.NetStandard.NetStandard20,
 
-                ExpectedDiagnostics =
-            {
-                DiagnosticResult.CompilerError("CS8203"),
-                new DiagnosticResult(DiagnosticDescriptors.SourceGenerators.MRG4001),
-            },
+                TestState =
+                {
+                    ExpectedDiagnostics =
+                    {
+                        DiagnosticResult.CompilerError("CS8203"),
+                        new DiagnosticResult(DiagnosticDescriptors.SourceGenerators.MRG4001),
+                    },
+                },
             };
 
             return test.RunAsync();
