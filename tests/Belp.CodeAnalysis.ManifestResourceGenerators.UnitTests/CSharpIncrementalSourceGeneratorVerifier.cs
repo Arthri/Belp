@@ -11,7 +11,7 @@ internal class CSharpIncrementalSourceGeneratorVerifier<TSourceGenerator>
 {
     public class Test : CSharpSourceGeneratorTest<EmptySourceGeneratorProvider, XUnitVerifier>
     {
-        public LanguageVersion LanguageVersion { get; init; } = LanguageVersion.CSharp7_3;
+        public LanguageVersion LanguageVersion { get; init; } = LanguageVersion.CSharp10;
 
         /// <inheritdoc />
         protected override IEnumerable<ISourceGenerator> GetSourceGenerators()
