@@ -24,7 +24,7 @@
 
 
 
-  <!-- Update Global Usings -->
+  <!-- Add Global Usings -->
   <ItemGroup>
     <Using Include="Xunit" />
     <Using Include="FluentAssertions" />
@@ -32,7 +32,7 @@
 
 
 
-  <!-- NuGet Packages -->
+  <!-- Dependencies -->
   <ItemGroup>
     <PackageReference Include="coverlet.collector" Version="3.1.2">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
