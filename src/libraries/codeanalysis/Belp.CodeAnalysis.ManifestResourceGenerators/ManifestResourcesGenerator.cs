@@ -1,4 +1,4 @@
-﻿using Microsoft.CodeAnalysis.Diagnostics;
+using Microsoft.CodeAnalysis.Diagnostics;
 using System.Collections.Immutable;
 using System.Diagnostics.CodeAnalysis;
 using System.Text;
@@ -132,7 +132,7 @@ public class ManifestResourcesGenerator : IIncrementalGenerator
         }
 
 #pragma warning disable IDE0046 // Convert to conditional expression
-        if (!resourceName.Contains('.'))
+        if (resourceName.IndexOf('.') == -1)
         {
             return DiagnosticDescriptors.SourceGenerators.ManifestResourcesGenerator.MRGN4004;
         }
