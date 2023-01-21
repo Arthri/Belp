@@ -7,6 +7,12 @@
 
 
 
+  <ItemGroup>
+    <Using Include="Belp.Tests.Extensions" />
+  </ItemGroup>
+
+
+
   <!-- Dependencies -->
   <ItemGroup>
     <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.4-beta1.22559.1">
@@ -15,7 +21,6 @@
     </PackageReference>
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp.SourceGenerators.Testing.XUnit" Version="1.1.1" />
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.4.0" />
-    <ProjectReference Include="..\..\src\libraries\codeanalysis\Belp.CodeAnalysis.ManifestResourceGenerators\Belp.CodeAnalysis.ManifestResourceGenerators.csproj" />
   </ItemGroup>
 
 </Project>

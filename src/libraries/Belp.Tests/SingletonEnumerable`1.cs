@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace Belp.CodeAnalysis.ManifestResourceGenerators.UnitTests;
+namespace Belp.Tests;
 
 /// <summary>
 /// Supports a simple iteration over a collection of one element.

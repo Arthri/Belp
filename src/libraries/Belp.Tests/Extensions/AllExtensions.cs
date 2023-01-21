@@ -1,4 +1,4 @@
-﻿namespace Belp.CodeAnalysis.ManifestResourceGenerators.UnitTests.Extensions;
+﻿namespace Belp.Tests.Extensions;
 
 /// <summary>
 /// Provides extension methods for all types.

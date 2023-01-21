@@ -45,6 +45,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <ProjectReference Include="$(MSBuildThisFileDirectory)../src/libraries/Belp.Tests/Belp.Tests.csproj" />
   </ItemGroup>
 
 
