@@ -16,6 +16,7 @@ public class DiagnosticsTest
         var test = new EmptyProjectNameTest
         {
             ReferenceAssemblies = ReferenceAssemblies.NetStandard.NetStandard20,
+
             ExpectedDiagnostics =
             {
                 DiagnosticResult.CompilerError("CS8203"),
