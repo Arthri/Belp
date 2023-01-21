@@ -1,4 +1,4 @@
-using Microsoft.CodeAnalysis.Testing;
+﻿using Microsoft.CodeAnalysis.Testing;
 using SGTest = Belp.Tests.CSharpIncrementalSourceGeneratorVerifier<Belp.CodeAnalysis.ManifestResourceGenerators.ManifestResourcesGenerator>.Test;
 
 namespace Belp.CodeAnalysis.ManifestResourceGenerators.UnitTests;
@@ -130,6 +130,43 @@ public partial class ManifestResourcesGenerator
                     ExpectedDiagnostics =
                     {
                         new DiagnosticResult(DiagnosticDescriptors.SourceGenerators.ManifestResourcesGenerator.MRGN4004),
+                    },
+                    GeneratedSources =
+                    {
+                        Source_ManifestResourcesHelper,
+                    },
+                },
+            };
+
+            return test.RunAsync();
+        }
+
+        [Fact]
+        public Task When_ResourceName_contains_X22X2EX2EX22X2C_expect_MRGN4005()
+        {
+            var test = new SGTest
+            {
+                TestState =
+                {
+                    AdditionalFiles =
+                    {
+                        ("/File..txt", ""),
+                    },
+                    AnalyzerConfigFiles =
+                    {
+                        (
+                            "/.editorconfig",
+                            """
+                            [/File..txt]
+                            build_metadata.AdditionalFiles.ManifestResourceName = File..txt
+                            build_metadata.AdditionalFiles.TargetSourceGenerator = ManifestResourcesGenerator
+                            """
+                        ),
+                    },
+
+                    ExpectedDiagnostics =
+                    {
+                        new DiagnosticResult(DiagnosticDescriptors.SourceGenerators.ManifestResourcesGenerator.MRGN4005),
                     },
                     GeneratedSources =
                     {
