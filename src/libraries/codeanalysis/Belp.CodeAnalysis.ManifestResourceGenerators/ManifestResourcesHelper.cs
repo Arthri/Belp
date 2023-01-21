@@ -7,7 +7,7 @@
 /// </summary>
 static partial class ManifestResourcesHelper
 {
-    private static readonly global::System.Reflection.Assembly _assembly;
+    private static readonly global::System.Reflection.Assembly _assembly = typeof(ManifestResourcesHelper).Assembly;
 
     /// <summary>
     /// Gets a stream to the resource with the specified name.
