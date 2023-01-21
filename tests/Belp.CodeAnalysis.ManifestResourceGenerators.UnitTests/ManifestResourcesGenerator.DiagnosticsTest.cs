@@ -43,11 +43,14 @@ public partial class ManifestResourcesGenerator
                     },
                     AnalyzerConfigFiles =
                     {
-                        ("/.editorconfig", """
-                        [/File.txt]
-                        build_metadata.AdditionalFiles.ManifestResourceName = File.txt.
-                        build_metadata.AdditionalFiles.TargetSourceGenerator = ManifestResourcesGenerator
-                        """),
+                        (
+                            "/.editorconfig",
+                            """
+                            [/File.txt]
+                            build_metadata.AdditionalFiles.ManifestResourceName = File.txt.
+                            build_metadata.AdditionalFiles.TargetSourceGenerator = ManifestResourcesGenerator
+                            """
+                        ),
                     },
 
                     ExpectedDiagnostics =
