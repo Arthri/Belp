@@ -66,5 +66,42 @@ public partial class ManifestResourcesGenerator
 
             return test.RunAsync();
         }
+
+        [Fact]
+        public Task When_ResourceName_is_emptyX2C_expect_MRGN4003()
+        {
+            var test = new SGTest
+            {
+                TestState =
+                {
+                    AdditionalFiles =
+                    {
+                        ("/File.txt", ""),
+                    },
+                    AnalyzerConfigFiles =
+                    {
+                        (
+                            "/.editorconfig",
+                            """
+                            [/File.txt]
+                            build_metadata.AdditionalFiles.ManifestResourceName =
+                            build_metadata.AdditionalFiles.TargetSourceGenerator = ManifestResourcesGenerator
+                            """
+                        ),
+                    },
+
+                    ExpectedDiagnostics =
+                    {
+                        new DiagnosticResult(DiagnosticDescriptors.SourceGenerators.ManifestResourcesGenerator.MRGN4003),
+                    },
+                    GeneratedSources =
+                    {
+                        Source_ManifestResourcesHelper,
+                    },
+                },
+            };
+
+            return test.RunAsync();
+        }
     }
 }
