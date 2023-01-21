@@ -103,5 +103,42 @@ public partial class ManifestResourcesGenerator
 
             return test.RunAsync();
         }
+
+        [Fact]
+        public Task When_ResourceName_does_not_contain_X22X2EX22X2C_expect_MRGN4004()
+        {
+            var test = new SGTest
+            {
+                TestState =
+                {
+                    AdditionalFiles =
+                    {
+                        ("/File", ""),
+                    },
+                    AnalyzerConfigFiles =
+                    {
+                        (
+                            "/.editorconfig",
+                            """
+                            [/File]
+                            build_metadata.AdditionalFiles.ManifestResourceName = File
+                            build_metadata.AdditionalFiles.TargetSourceGenerator = ManifestResourcesGenerator
+                            """
+                        ),
+                    },
+
+                    ExpectedDiagnostics =
+                    {
+                        new DiagnosticResult(DiagnosticDescriptors.SourceGenerators.ManifestResourcesGenerator.MRGN4004),
+                    },
+                    GeneratedSources =
+                    {
+                        Source_ManifestResourcesHelper,
+                    },
+                },
+            };
+
+            return test.RunAsync();
+        }
     }
 }
