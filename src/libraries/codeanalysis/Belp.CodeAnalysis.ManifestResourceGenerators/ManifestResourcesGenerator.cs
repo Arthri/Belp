@@ -14,7 +14,7 @@ public class ManifestResourcesGenerator : IIncrementalGenerator
     /// <summary>
     /// Gets the source code for the embedded ManifestResourcesHelper.cs
     /// </summary>
-    public static string Code_ManifestResourcesHelper { get; } = ManifestResourcesHelper.GetString($"{nameof(Belp)}.{nameof(CodeAnalysis)}.{nameof(ManifestResourceGenerators)}.{nameof(ManifestResourcesHelper)}") ?? throw new FileNotFoundException("Could not find embedded resource \"ManifestResourcesHelper.cs\"");
+    public static string Code_ManifestResourcesHelper { get; } = ManifestResourcesHelper.GetString($"{nameof(Belp)}.{nameof(CodeAnalysis)}.{nameof(ManifestResourceGenerators)}.{nameof(ManifestResourcesHelper)}.cs") ?? throw new FileNotFoundException("Could not find embedded resource \"ManifestResourcesHelper.cs\"");
 
     /// <inheritdoc />
     public void Initialize(IncrementalGeneratorInitializationContext context)
