@@ -1,0 +1,7 @@
+[/File1.txt]
+build_metadata.AdditionalFiles.ManifestResourceName = Project1.File1.txt
+build_metadata.AdditionalFiles.TargetSourceGenerator = ManifestResourcesGenerator
+
+[/DirA/File2.json]
+build_metadata.AdditionalFiles.ManifestResourceName = Project1.DirA.File2.json
+build_metadata.AdditionalFiles.TargetSourceGenerator = ManifestResourcesGenerator
