@@ -45,6 +45,16 @@ internal ref struct IndentedStringBuilder
         }
     }
 
+    public IndentedStringBuilder Append<T>(T value)
+        where T : notnull
+    {
+        _ = _builder
+            .Append(value.ToString())
+            ;
+
+        return this;
+    }
+
     public IndentedStringBuilder AppendLine()
     {
         _ = _builder
