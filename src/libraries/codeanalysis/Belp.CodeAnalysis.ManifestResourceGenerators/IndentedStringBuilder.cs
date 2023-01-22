@@ -39,6 +39,19 @@ internal ref struct IndentedStringBuilder
         return this;
     }
 
+    /// <inheritdoc cref="StringBuilder.AppendLine(string)" />
+    public IndentedStringBuilder AppendLine<T>(T value)
+        where T : notnull
+    {
+        _ = _builder
+            .Append(' ', CurrentIndent)
+            .AppendLine(value.ToString())
+            .Append(LineEnding)
+            ;
+
+        return this;
+    }
+
     /// <inheritdoc cref="StringBuilder.ToString()" />
     public override string ToString()
     {
