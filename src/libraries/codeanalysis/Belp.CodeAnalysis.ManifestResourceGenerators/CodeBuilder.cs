@@ -2,7 +2,7 @@
 
 namespace Belp.CodeAnalysis.ManifestResourceGenerators;
 
-internal ref struct IndentedStringBuilder
+internal ref struct CodeBuilder
 {
     private readonly StringBuilder _builder;
 
@@ -12,22 +12,22 @@ internal ref struct IndentedStringBuilder
 
     public string LineEnding { get; init; } = "\r\n";
 
-    public IndentedStringBuilder()
+    public CodeBuilder()
     {
         _builder = new StringBuilder();
     }
 
-    public IndentedStringBuilder(string value)
+    public CodeBuilder(string value)
     {
         _builder = new StringBuilder(value);
     }
 
-    public IndentedStringBuilder(StringBuilder builder)
+    public CodeBuilder(StringBuilder builder)
     {
         _builder = builder;
     }
 
-    public IndentedStringBuilder Indent
+    public CodeBuilder Indent
     {
         get
         {
@@ -36,7 +36,7 @@ internal ref struct IndentedStringBuilder
         }
     }
 
-    public IndentedStringBuilder Undent
+    public CodeBuilder Undent
     {
         get
         {
@@ -45,7 +45,7 @@ internal ref struct IndentedStringBuilder
         }
     }
 
-    public IndentedStringBuilder Append<T>(T value)
+    public CodeBuilder Append<T>(T value)
         where T : notnull
     {
         _ = _builder
@@ -55,7 +55,7 @@ internal ref struct IndentedStringBuilder
         return this;
     }
 
-    public IndentedStringBuilder AppendLine()
+    public CodeBuilder AppendLine()
     {
         _ = _builder
             .Append(' ', CurrentIndent)
@@ -65,7 +65,7 @@ internal ref struct IndentedStringBuilder
         return this;
     }
 
-    public IndentedStringBuilder AppendLine(string value)
+    public CodeBuilder AppendLine(string value)
     {
         _ = _builder
             .Append(' ', CurrentIndent)
@@ -76,7 +76,7 @@ internal ref struct IndentedStringBuilder
         return this;
     }
 
-    public IndentedStringBuilder AppendLine<T>(T value)
+    public CodeBuilder AppendLine<T>(T value)
         where T : notnull
     {
         _ = _builder
@@ -96,17 +96,17 @@ internal ref struct IndentedStringBuilder
 }
 
 /// <summary>
-/// Provides extensions for <see cref="IndentedStringBuilder"/>.
+/// Provides extensions for <see cref="CodeBuilder"/>.
 /// </summary>
 internal static class IndentedStringBuilderExtensions
 {
-    public static IndentedStringBuilder Indent(this IndentedStringBuilder builder, int count)
+    public static CodeBuilder Indent(this CodeBuilder builder, int count)
     {
         builder.CurrentIndent += builder.IndentSize * count;
         return builder;
     }
 
-    public static IndentedStringBuilder Undent(this IndentedStringBuilder builder, int count)
+    public static CodeBuilder Undent(this CodeBuilder builder, int count)
     {
         builder.CurrentIndent -= builder.IndentSize * count;
         return builder;
