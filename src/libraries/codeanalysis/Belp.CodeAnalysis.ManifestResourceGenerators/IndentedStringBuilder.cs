@@ -8,6 +8,8 @@ internal ref struct IndentedStringBuilder
 
     public int CurrentIndent { get; set; }
 
+    public int IndentSize { get; init; } = 4;
+
     public string LineEnding { get; init; } = "\r\n";
 
     public IndentedStringBuilder()
@@ -23,6 +25,24 @@ internal ref struct IndentedStringBuilder
     public IndentedStringBuilder(StringBuilder builder)
     {
         _builder = builder;
+    }
+
+    public IndentedStringBuilder Indent
+    {
+        get
+        {
+            CurrentIndent += IndentSize;
+            return this;
+        }
+    }
+
+    public IndentedStringBuilder Undent
+    {
+        get
+        {
+            CurrentIndent -= IndentSize;
+            return this;
+        }
     }
 
     /// <inheritdoc cref="StringBuilder.AppendLine()" />
@@ -65,5 +85,23 @@ internal ref struct IndentedStringBuilder
     public override string ToString()
     {
         return _builder.ToString();
+    }
+}
+
+/// <summary>
+/// Provides extensions for <see cref="IndentedStringBuilder"/>.
+/// </summary>
+internal static class IndentedStringBuilderExtensions
+{
+    public static IndentedStringBuilder Indent(this IndentedStringBuilder builder, int count)
+    {
+        builder.CurrentIndent += builder.IndentSize * count;
+        return builder;
+    }
+
+    public static IndentedStringBuilder Undent(this IndentedStringBuilder builder, int count)
+    {
+        builder.CurrentIndent -= builder.IndentSize * count;
+        return builder;
     }
 }
