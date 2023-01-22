@@ -1,4 +1,4 @@
-using Microsoft.CodeAnalysis.Diagnostics;
+﻿using Microsoft.CodeAnalysis.Diagnostics;
 using System.Collections.Immutable;
 using System.Diagnostics.CodeAnalysis;
 using System.Text;
@@ -337,8 +337,22 @@ public class ManifestResourcesGenerator : IIncrementalGenerator
         }
 
         _ = codeBuilder
-            .AppendLine($$""""""public static global::System.Collections.Generic.IReadOnlyList<string> Resources { get; } = new string[] { """"{{string.Join("\"\"\"\", \"\"\"\"", resourceNamespace.Resources)}}"""" };"""""")
+            .AppendLine($$"""public static global::System.Collections.Generic.IReadOnlyList<string> Resources { get; } = new string[]""")
+            .AppendLine("{")
         ;
+
+        codeBuilder.CurrentIndent += IndentSize;
+
+        foreach (string resource in resourceNamespace.Resources)
+        {
+            _ = codeBuilder.AppendLine($"\"\"\"\"{resource}\"\"\"\",");
+        }
+
+        codeBuilder.CurrentIndent -= IndentSize;
+
+        _ = codeBuilder
+            .AppendLine("};")
+            ;
 
         for (int i = 0; i < namespaces.Length - 1; i++)
         {
