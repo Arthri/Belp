@@ -1,6 +1,3 @@
-﻿using Microsoft.CodeAnalysis.Text;
-using System.Text;
-
 namespace Belp.CodeAnalysis.ManifestResourceGenerators.UnitTests;
 
 public static partial class ManifestResourcesGenerator

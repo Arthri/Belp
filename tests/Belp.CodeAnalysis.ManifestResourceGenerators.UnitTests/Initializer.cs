@@ -1,6 +1,4 @@
-﻿using Belp.Tests;
-using Microsoft.CodeAnalysis.Testing;
-using System.Runtime.CompilerServices;
+﻿using System.Runtime.CompilerServices;
 
 namespace Belp.CodeAnalysis.ManifestResourceGenerators.UnitTests;
 
