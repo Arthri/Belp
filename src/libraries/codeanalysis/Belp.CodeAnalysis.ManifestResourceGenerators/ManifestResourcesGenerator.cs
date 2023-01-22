@@ -19,9 +19,23 @@ public class ManifestResourcesGenerator : IIncrementalGenerator
     /// <inheritdoc />
     public void Initialize(IncrementalGeneratorInitializationContext context)
     {
+        context.RegisterPostInitializationOutput(Execute_GenerateStaticResourceHelpers);
+
         IncrementalValueProvider<string?> assemblyName = context.CompilationProvider.Select(static (compilation, cancellationToken) => compilation.AssemblyName);
 
-        context.RegisterSourceOutput(assemblyName, Execute_GenerateStaticResourceHelpers);
+        context.RegisterSourceOutput(assemblyName, static (context, assemblyName) =>
+        {
+            if (CheckAssemblyName(assemblyName) is { } checkAssemblyNameResult)
+            {
+                context.ReportDiagnostic(
+                    Diagnostic.Create(
+                        checkAssemblyNameResult,
+                        Location.None
+                    )
+                );
+                return;
+            }
+        });
 
         IncrementalValuesProvider<string> resourceNames = context
             .AdditionalTextsProvider
@@ -207,19 +221,8 @@ public class ManifestResourcesGenerator : IIncrementalGenerator
         }
     }
 
-    private static void Execute_GenerateStaticResourceHelpers(SourceProductionContext context, string? assemblyName)
+    private static void Execute_GenerateStaticResourceHelpers(IncrementalGeneratorPostInitializationContext context)
     {
-        if (CheckAssemblyName(assemblyName) is { } checkAssemblyNameResult)
-        {
-            context.ReportDiagnostic(
-                Diagnostic.Create(
-                    checkAssemblyNameResult,
-                    Location.None
-                )
-            );
-            return;
-        }
-
         context.AddSource("ManifestResourcesHelper.cs", Code_ManifestResourcesHelper);
     }
 
