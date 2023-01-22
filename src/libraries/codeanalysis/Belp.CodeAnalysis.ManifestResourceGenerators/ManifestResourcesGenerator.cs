@@ -1,4 +1,4 @@
-﻿using Microsoft.CodeAnalysis.Diagnostics;
+using Microsoft.CodeAnalysis.Diagnostics;
 using System.Collections.Immutable;
 using System.Diagnostics.CodeAnalysis;
 using System.Text;
@@ -83,9 +83,12 @@ public class ManifestResourcesGenerator : IIncrementalGenerator
                     int i = 0;
                     foreach ((string resourceNamespace, List<string> resources) in namespacesMap)
                     {
+                        string[] finalResources = resources.ToArray();
+                        Array.Sort(finalResources);
+
                         resourceNamespaces[i++] = new ResourceNamespace(
                             resourceNamespace,
-                            new(resources.ToArray())
+                            new(finalResources)
                         );
                     }
                 }
