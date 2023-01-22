@@ -6,8 +6,6 @@ internal ref struct IndentedStringBuilder
 {
     private readonly StringBuilder _builder;
 
-    public StringBuilder Builder => _builder;
-
     public int CurrentIndent { get; init; }
 
     public IndentedStringBuilder(StringBuilder builder, int currentIndent = 0)
