@@ -1,8 +1,8 @@
-﻿using System.Text;
+using System.Text;
 
 namespace Belp.CodeAnalysis.ManifestResourceGenerators;
 
-internal ref struct CodeBuilder
+internal class CodeBuilder
 {
     private readonly StringBuilder _builder;
 
