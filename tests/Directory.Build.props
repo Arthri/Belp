@@ -29,6 +29,7 @@
     <Using Include="FluentAssertions" />
     <Using Include="Microsoft.CodeAnalysis.Testing" />
     <Using Include="Microsoft.CodeAnalysis.Text" />
+    <Using Include="System.Text" />
     <Using Include="Xunit" />
   </ItemGroup>
 
