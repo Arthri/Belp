@@ -20,10 +20,9 @@ internal ref struct IndentedStringBuilder
         _builder = new StringBuilder(value);
     }
 
-    public IndentedStringBuilder(StringBuilder builder, int currentIndent = 0)
+    public IndentedStringBuilder(StringBuilder builder)
     {
         _builder = builder;
-        CurrentIndent = currentIndent;
     }
 
     /// <inheritdoc cref="StringBuilder.AppendLine()" />
