@@ -11,16 +11,9 @@ namespace Belp.CodeAnalysis.ManifestResourceGenerators;
 [Generator(LanguageNames.CSharp)]
 public class ManifestResourcesGenerator : IIncrementalGenerator
 {
-    /// <summary>
-    /// Gets the source code for the embedded ManifestResourcesHelper.cs
-    /// </summary>
-    public static string Code_ManifestResourcesHelper { get; } = ManifestResourcesHelper.GetString($"{nameof(Belp)}.{nameof(CodeAnalysis)}.{nameof(ManifestResourceGenerators)}.{nameof(ManifestResourcesHelper)}.cs") ?? throw new FileNotFoundException("Could not find embedded resource \"ManifestResourcesHelper.cs\"");
-
     /// <inheritdoc />
     public void Initialize(IncrementalGeneratorInitializationContext context)
     {
-        context.RegisterPostInitializationOutput(Execute_GenerateStaticResourceHelpers);
-
         IncrementalValueProvider<string?> assemblyName = context.CompilationProvider.Select(static (compilation, cancellationToken) => compilation.AssemblyName);
 
         context.RegisterSourceOutput(assemblyName, static (context, assemblyName) =>
@@ -219,11 +212,6 @@ public class ManifestResourcesGenerator : IIncrementalGenerator
 
             return new(resourceName[..resourceName.IndexOf('.')], resourceName.Split('.').AsSpan(1));
         }
-    }
-
-    private static void Execute_GenerateStaticResourceHelpers(IncrementalGeneratorPostInitializationContext context)
-    {
-        context.AddSource("ManifestResourcesHelper.cs", Code_ManifestResourcesHelper);
     }
 
     private static void Execute_GenerateResourceNameHierarchy(
