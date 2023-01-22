@@ -23,10 +23,6 @@ public partial class ManifestResourcesGenerator
                         DiagnosticResult.CompilerError("CS8203"),
                         new DiagnosticResult(DiagnosticDescriptors.SourceGenerators.MRG4001),
                     },
-                    GeneratedSources =
-                    {
-                        Source_ManifestResourcesHelper,
-                    },
                 },
             };
 
@@ -59,10 +55,6 @@ public partial class ManifestResourcesGenerator
                     ExpectedDiagnostics =
                     {
                         new DiagnosticResult(DiagnosticDescriptors.SourceGenerators.ManifestResourcesGenerator.MRGN4002),
-                    },
-                    GeneratedSources =
-                    {
-                        Source_ManifestResourcesHelper,
                     },
                 },
             };
@@ -97,10 +89,6 @@ public partial class ManifestResourcesGenerator
                     {
                         new DiagnosticResult(DiagnosticDescriptors.SourceGenerators.ManifestResourcesGenerator.MRGN4003),
                     },
-                    GeneratedSources =
-                    {
-                        Source_ManifestResourcesHelper,
-                    },
                 },
             };
 
@@ -134,10 +122,6 @@ public partial class ManifestResourcesGenerator
                     {
                         new DiagnosticResult(DiagnosticDescriptors.SourceGenerators.ManifestResourcesGenerator.MRGN4004),
                     },
-                    GeneratedSources =
-                    {
-                        Source_ManifestResourcesHelper,
-                    },
                 },
             };
 
@@ -170,10 +154,6 @@ public partial class ManifestResourcesGenerator
                     ExpectedDiagnostics =
                     {
                         new DiagnosticResult(DiagnosticDescriptors.SourceGenerators.ManifestResourcesGenerator.MRGN4005),
-                    },
-                    GeneratedSources =
-                    {
-                        Source_ManifestResourcesHelper,
                     },
                 },
             };
