@@ -343,7 +343,7 @@ public class ManifestResourcesGenerator : IIncrementalGenerator
         }
 
         _ = codeBuilder
-            .AppendLine($$"""public static IReadOnlyList<string> Resources = new string[] { @"{{string.Join("\", @\"", resourceNamespace.Resources)}}" };""")
+            .AppendLine($$"""public static global::System.Collections.Generic.IReadOnlyList<string> Resources = new string[] { @"{{string.Join("\", @\"", resourceNamespace.Resources)}}" };""")
         ;
 
         for (int i = 0; i < namespaces.Length - 1; i++)
