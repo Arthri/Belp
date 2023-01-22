@@ -1,4 +1,4 @@
-using Microsoft.CodeAnalysis.Diagnostics;
+﻿using Microsoft.CodeAnalysis.Diagnostics;
 using System.Collections.Immutable;
 using System.Diagnostics.CodeAnalysis;
 using System.Text;
@@ -269,7 +269,7 @@ public class ManifestResourcesGenerator : IIncrementalGenerator
             ;
 
         context.AddSource(
-            resourceName + ".cs",
+            $"{resourceName}.cs",
             codeBuilder.ToString()
         );
     }
