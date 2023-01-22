@@ -27,7 +27,7 @@ public class CSharpIncrementalSourceGeneratorVerifier<TSourceGenerator>
         /// <summary>
         /// Stores the project name to prevent it from changing.
         /// </summary>
-        private string _projectName;
+        private string? _projectName;
 
         // This property is used at least once in AnalyzerTest's constructor, allowing
         // us to cache it as soon as a Test is initialized.
