@@ -73,7 +73,7 @@ internal class CodeBuilder
     {
         _ = _builder
             .Append(' ', CurrentIndent)
-            .AppendLine(value)
+            .Append(value)
             .Append(LineEnding)
             ;
 
@@ -85,7 +85,7 @@ internal class CodeBuilder
     {
         _ = _builder
             .Append(' ', CurrentIndent)
-            .AppendLine(value.ToString())
+            .Append(value.ToString())
             .Append(LineEnding)
             ;
 
