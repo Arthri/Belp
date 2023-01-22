@@ -1,4 +1,4 @@
-using Microsoft.CodeAnalysis.Text;
+﻿using Microsoft.CodeAnalysis.Text;
 using System.Text;
 
 namespace Belp.CodeAnalysis.ManifestResourceGenerators.UnitTests;
@@ -59,4 +59,9 @@ public static partial class ManifestResourcesGenerator
             Encoding.UTF8
         )
     );
+
+    /// <summary>
+    /// Gets the path to the generator's generated sources.
+    /// </summary>
+    public static string OutputPath => """Belp.CodeAnalysis.ManifestResourceGenerators\Belp.CodeAnalysis.ManifestResourceGenerators.ManifestResourcesGenerator\""";
 }
