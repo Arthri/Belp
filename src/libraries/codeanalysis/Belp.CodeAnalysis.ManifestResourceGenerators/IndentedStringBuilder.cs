@@ -10,6 +10,16 @@ internal ref struct IndentedStringBuilder
 
     public string LineEnding { get; init; } = "\r\n";
 
+    public IndentedStringBuilder()
+    {
+        _builder = new StringBuilder();
+    }
+
+    public IndentedStringBuilder(string value)
+    {
+        _builder = new StringBuilder(value);
+    }
+
     public IndentedStringBuilder(StringBuilder builder, int currentIndent = 0)
     {
         _builder = builder;
