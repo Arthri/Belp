@@ -8,6 +8,8 @@ internal ref struct IndentedStringBuilder
 
     public int CurrentIndent { get; init; }
 
+    public string LineEnding { get; init; } = "\r\n";
+
     public IndentedStringBuilder(StringBuilder builder, int currentIndent = 0)
     {
         _builder = builder;
@@ -19,7 +21,7 @@ internal ref struct IndentedStringBuilder
     {
         _ = _builder
             .Append(' ', CurrentIndent)
-            .AppendLine()
+            .Append(LineEnding)
             ;
 
         return this;
@@ -31,6 +33,7 @@ internal ref struct IndentedStringBuilder
         _ = _builder
             .Append(' ', CurrentIndent)
             .AppendLine(value)
+            .Append(LineEnding)
             ;
 
         return this;
