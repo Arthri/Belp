@@ -203,8 +203,7 @@ public class ManifestResourcesGenerator : IIncrementalGenerator
             // then create the first name as the declaration namespace
             // and the others as namespaces
 
-            string[] firstName = resourceName.Split(new[] { '.' }, 1);
-            return new(firstName[0], resourceName.Split('.').AsSpan(1));
+            return new(resourceName[..resourceName.IndexOf('.')], resourceName.Split('.').AsSpan(1));
         }
     }
 
