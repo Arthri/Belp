@@ -23,6 +23,10 @@ public partial class ManifestResourcesGenerator
                         DiagnosticResult.CompilerError("CS8203"),
                         new DiagnosticResult(DiagnosticDescriptors.SourceGenerators.MRG4001),
                     },
+                    GeneratedSources =
+                    {
+                        Source_ManifestResourcesHelper,
+                    },
                 },
             };
 
