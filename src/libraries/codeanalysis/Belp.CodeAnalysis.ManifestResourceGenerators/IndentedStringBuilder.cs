@@ -6,7 +6,7 @@ internal ref struct IndentedStringBuilder
 {
     private readonly StringBuilder _builder;
 
-    public int CurrentIndent { get; init; }
+    public int CurrentIndent { get; set; }
 
     public string LineEnding { get; init; } = "\r\n";
 
