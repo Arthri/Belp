@@ -18,4 +18,10 @@
     <ProjectReference Include="..\..\src\libraries\codeanalysis\Belp.CodeAnalysis.ManifestResourceGenerators\Belp.CodeAnalysis.ManifestResourceGenerators.csproj" />
   </ItemGroup>
 
+
+
+  <ItemGroup>
+    <None Include="Resources\**\*" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
 </Project>
