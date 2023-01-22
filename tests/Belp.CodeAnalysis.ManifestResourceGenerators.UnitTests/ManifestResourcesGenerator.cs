@@ -1,10 +1,13 @@
-﻿using Microsoft.CodeAnalysis.Text;
+using Microsoft.CodeAnalysis.Text;
 using System.Text;
 
 namespace Belp.CodeAnalysis.ManifestResourceGenerators.UnitTests;
 
 public static partial class ManifestResourcesGenerator
 {
+    /// <summary>
+    /// Gets the source code of ManifestResourcesHelper.cs.
+    /// </summary>
     public static (string filename, SourceText content) Source_ManifestResourcesHelper => (
         """Belp.CodeAnalysis.ManifestResourceGenerators\Belp.CodeAnalysis.ManifestResourceGenerators.ManifestResourcesGenerator\ManifestResourcesHelper.cs""",
         SourceText.From(
