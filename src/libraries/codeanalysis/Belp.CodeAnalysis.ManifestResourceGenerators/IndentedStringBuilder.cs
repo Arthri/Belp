@@ -1,4 +1,4 @@
-using System.Text;
+﻿using System.Text;
 
 namespace Belp.CodeAnalysis.ManifestResourceGenerators;
 
@@ -45,7 +45,6 @@ internal ref struct IndentedStringBuilder
         }
     }
 
-    /// <inheritdoc cref="StringBuilder.AppendLine()" />
     public IndentedStringBuilder AppendLine()
     {
         _ = _builder
@@ -56,7 +55,6 @@ internal ref struct IndentedStringBuilder
         return this;
     }
 
-    /// <inheritdoc cref="StringBuilder.AppendLine(string)" />
     public IndentedStringBuilder AppendLine(string value)
     {
         _ = _builder
@@ -68,7 +66,6 @@ internal ref struct IndentedStringBuilder
         return this;
     }
 
-    /// <inheritdoc cref="StringBuilder.AppendLine(string)" />
     public IndentedStringBuilder AppendLine<T>(T value)
         where T : notnull
     {
