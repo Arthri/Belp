@@ -27,7 +27,7 @@ public partial class ManifestResourcesGenerator
         {
             public IEnumerator<object?[]> GetEnumerator()
             {
-                string testsPath = Path.Combine(Resources.Path, "ManifestResourcesGenerator", "Generation");
+                string testsPath = Path.Combine(Resources.BasePath, "ManifestResourcesGenerator", "Generation");
                 string[] tests = Directory.GetDirectories(testsPath);
 
                 foreach (string test in tests)
