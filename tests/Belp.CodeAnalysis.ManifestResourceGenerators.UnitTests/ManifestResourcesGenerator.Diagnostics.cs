@@ -6,15 +6,10 @@ public partial class ManifestResourcesGenerator
 {
     public partial class Diagnostics
     {
-        private class EmptyProjectNameTest : SGTest
-        {
-            protected override string DefaultTestProjectName => "";
-        }
-
         [Fact]
         public Task When_AssemblyName_eq_nullX2C_expect_CS8203_and_MRG4001()
         {
-            var test = new EmptyProjectNameTest
+            var test = SGTest.From("", () => new()
             {
                 TestState =
                 {
@@ -24,7 +19,7 @@ public partial class ManifestResourcesGenerator
                         new DiagnosticResult(DiagnosticDescriptors.SourceGenerators.MRG4001),
                     },
                 },
-            };
+            });
 
             return test.RunAsync();
         }

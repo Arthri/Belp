@@ -19,6 +19,24 @@ public class CSharpIncrementalSourceGeneratorVerifier<TSourceGenerator>
     public class Test : CSharpSourceGeneratorTest<EmptySourceGeneratorProvider, XUnitVerifier>
     {
         /// <summary>
+        /// Dummy field used to carry project name across constructor/inheritance boundaries.
+        /// </summary>
+        [ThreadStatic]
+        private static string? ProjectName;
+
+        /// <summary>
+        /// Stores the project name to prevent it from changing.
+        /// </summary>
+        private string _projectName;
+
+        // This property is used at least once in AnalyzerTest's constructor, allowing
+        // us to cache it as soon as a Test is initialized.
+        /// <inheritdoc />
+        protected override string DefaultTestProjectName => _projectName ??= ProjectName ?? base.DefaultTestProjectName;
+
+
+
+        /// <summary>
         /// The language version for the test to run in.
         /// </summary>
         public LanguageVersion LanguageVersion { get; init; } = TestConfiguration.DefaultCSharpLanguageVersion;
@@ -44,6 +62,24 @@ public class CSharpIncrementalSourceGeneratorVerifier<TSourceGenerator>
         protected override ParseOptions CreateParseOptions()
         {
             return ((CSharpParseOptions)base.CreateParseOptions()).WithLanguageVersion(LanguageVersion);
+        }
+
+        /// <summary>
+        /// Initializes a new instance of <see cref="Test"/> with the specified project name.
+        /// </summary>
+        /// <param name="projectName">The new test project's name.</param>
+        /// <param name="construct">An optional function that creates the <see cref="Test"/> to modify.</param>
+        /// <returns>A new <see cref="Test"/> with the specified project name.</returns>
+        public static Test From(string projectName, Func<Test>? construct = null)
+        {
+            ProjectName = projectName;
+            CSharpIncrementalSourceGeneratorVerifier<TSourceGenerator>.Test result = construct is null
+                ? new Test()
+                : construct()
+                ;
+            ProjectName = null;
+
+            return result;
         }
     }
 }
