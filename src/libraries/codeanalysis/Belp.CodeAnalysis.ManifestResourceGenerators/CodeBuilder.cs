@@ -45,6 +45,10 @@ internal ref struct CodeBuilder
         }
     }
 
+    public CodeBuilder OpenBrace => AppendLine("{").Indent;
+
+    public CodeBuilder ShutBrace => Undent.AppendLine("}");
+
     public CodeBuilder Append<T>(T value)
         where T : notnull
     {
@@ -109,6 +113,30 @@ internal static class IndentedStringBuilderExtensions
     public static CodeBuilder Undent(this CodeBuilder builder, int count)
     {
         builder.CurrentIndent -= builder.IndentSize * count;
+        return builder;
+    }
+
+    public static CodeBuilder OpenBrace(this CodeBuilder builder, int count)
+    {
+        for (int i = 0; i < count; i++)
+        {
+            _ = builder
+                .OpenBrace
+                ;
+        }
+
+        return builder;
+    }
+
+    public static CodeBuilder ShutBrace(this CodeBuilder builder, int count)
+    {
+        for (int i = 0; i < count; i++)
+        {
+            _ = builder
+                .ShutBrace
+                ;
+        }
+
         return builder;
     }
 }
