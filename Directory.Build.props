@@ -9,6 +9,13 @@
 
 
 
+  <!-- Other Build Files -->
+  <PropertyGroup>
+    <AfterMicrosoftNETSdkTargets>$(AfterMicrosoftNETSdkTargets);$(MSBuildThisFileDirectory)After.Microsoft.NET.Sdk.targets</AfterMicrosoftNETSdkTargets>
+  </PropertyGroup>
+
+
+
   <!-- Package Information -->
   <PropertyGroup>
     <Authors>Arthri</Authors>
