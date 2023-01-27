@@ -9,13 +9,6 @@
 
 
 
-  <!-- Other Build Files -->
-  <PropertyGroup>
-    <AfterMicrosoftNETSdkTargets>$(AfterMicrosoftNETSdkTargets);$(MSBuildThisFileDirectory)After.Microsoft.NET.Sdk.targets</AfterMicrosoftNETSdkTargets>
-  </PropertyGroup>
-
-
-
   <!-- Package Information -->
   <PropertyGroup>
     <Authors>Arthri</Authors>
@@ -28,7 +21,12 @@
 
 
   <!-- Package Assets Configuration -->
-  <ItemGroup Condition="'$(EnableDefaultItems)' == 'true'">
+  <PropertyGroup>
+    <!-- Prevent duplicated items -->
+    <DefaultItemExcludes Condition="'$(EnableDefaultPackItems)' != 'false'">$(DefaultItemExcludes);Assets\**\*</DefaultItemExcludes>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(EnableDefaultPackItems)' != 'false'">
     <!-- Pack any files and folders under Assets/ -->
     <None Include="Assets\**\*" Pack="true" PackagePath="/" />
 

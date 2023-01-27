@@ -16,7 +16,7 @@
 
 
 
-  <ItemGroup Condition="'$(EnableDefaultItems)' == 'true'">
+  <ItemGroup Condition="'$(EnableDefaultPackItems)' != 'false'">
     <!--
       Change _Package to $(PackageId) to make forking easier
       Must be in targets because PackageId not available in props
