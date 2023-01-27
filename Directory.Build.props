@@ -9,6 +9,13 @@
 
 
 
+  <!-- Other Build Files -->
+  <PropertyGroup>
+    <AfterMicrosoftNETSdkTargets>$(AfterMicrosoftNETSdkTargets);$(MSBuildThisFileDirectory)After.Microsoft.NET.Sdk.targets</AfterMicrosoftNETSdkTargets>
+  </PropertyGroup>
+
+
+
   <!-- Package Information -->
   <PropertyGroup>
     <Authors>Arthri</Authors>
@@ -20,9 +27,11 @@
 
 
 
-  <ItemGroup>
+  <!-- Package Assets Configuration -->
+  <ItemGroup Condition="'$(EnableDefaultItems)' == 'true'">
     <!-- Pack any files and folders under Assets/ -->
-    <None Include="Assets/**/*" Pack="true" PackagePath="/" />
+    <None Include="Assets\**\*" Pack="true" PackagePath="/" />
+
     <!-- Pack README.md beside .proj -->
     <None Include="README.md" Condition="Exists('README.md')" Pack="true" PackagePath="/" />
   </ItemGroup>

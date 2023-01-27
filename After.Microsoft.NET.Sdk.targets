@@ -1,0 +1,12 @@
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <!--
+      Prevent duplicated items
+      This must be placed here because EnableDefaultItems is not yet set
+      at Directory.Build.props and Directory.Build.targets
+    -->
+    <DefaultItemExcludes Condition="'$(EnableDefaultItems)' == 'true'">$(DefaultItemExcludes);Assets\**\*</DefaultItemExcludes>
+  </PropertyGroup>
+
+</Project>

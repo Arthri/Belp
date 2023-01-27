@@ -16,6 +16,16 @@
 
 
 
+  <ItemGroup Condition="'$(EnableDefaultItems)' == 'true'">
+    <!--
+      Change _Package to $(PackageId) to make forking easier
+      Must be in targets because PackageId not available in props
+    -->
+    <None Update="**\_Package.*" PackagePath="%(RecursiveDir)$(PackageId)%(Extension)" Link="%(RecursiveDir)$(PackageId)%(Extension)" />
+  </ItemGroup>
+
+
+
   <!-- Automatically clears cache and pushes to local NuGet source  -->
   <Target Name="_ClearNuGetCacheAndPushLocal" Condition="'$(DevelopmentNuGet)' == 'true'" AfterTargets="Pack">
     <Error Condition="'$(NuGetPackageRoot)' == ''" Text="NuGetPackageRoot is empty" />
