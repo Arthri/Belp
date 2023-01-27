@@ -19,4 +19,21 @@
     <BuildDependsOn Condition="'$(DisableDefaultBuild)' != 'false'"></BuildDependsOn>
   </PropertyGroup>
 
+
+
+  <!-- Incremental Builds for dotnet/project-system -->
+  <Target Name="CollectUpToDateCheckInputDesignTime" Returns="@(UpToDateCheckInput)">
+    <ItemGroup>
+      <UpToDateCheckInput Include="@(None)" Condition="'%(None.Pack)' == 'true'" />
+    </ItemGroup>
+  </Target>
+
+  <Target Name="CollectUpToDateCheckOutputDesignTime" Returns="@(UpToDateCheckOutput)" />
+
+  <Target Name="CollectUpToDateCheckBuiltDesignTime" Returns="@(UpToDateCheckBuilt)">
+    <ItemGroup>
+      <UpToDateCheckBuilt Include="$(PackageOutputPath)$(PackageId).$([System.Text.RegularExpressions.Regex]::Replace('$(PackageVersion)', '(\d+\.\d+\.\d+)\.0+(?![1-9])\b', '$1')).nupkg" />
+    </ItemGroup>
+  </Target>
+
 </Project>
