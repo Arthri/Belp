@@ -29,6 +29,15 @@ All of the following builds the specified project(s) and pushes their NuGet pack
 
 > **Note**: The version of the temporary package must not be a published version. And after the development session, be sure to clear the temporary packages from the global cache.
 
+### Global Build Configuration
+The root-level `Directory.Build.props` and `Directory.Build.targets` apply configuration to all projects. A few examples are listed below.
+- `Authors` = `Arthri`
+- `PackageLicenseExpression` = `MIT`
+- `PackageProjectUrl` = `https://github.com/Arthri/Belp/`
+- `Product` = `Belp`
+
+There are more Directory.Build.* files across the repository. It is recommended to read them before changing any build files.
+
 ### Package Assets
 
 #### Assets Folder
