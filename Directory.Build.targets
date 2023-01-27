@@ -27,7 +27,7 @@
 
 
   <!-- Automatically clears cache and pushes to local NuGet source  -->
-  <Target Name="_ClearNuGetCacheAndPushLocal" Condition="'$(DevelopmentNuGet)' == 'true'" AfterTargets="Pack">
+  <Target Name="_ClearNuGetCacheAndPushLocal" Condition="'$(DevelopmentNuGet)' == 'true'" DependsOnTargets="Pack" AfterTargets="Pack">
     <Error Condition="'$(NuGetPackageRoot)' == ''" Text="NuGetPackageRoot is empty" />
     <RemoveDir Directories="$(NuGetPackageRoot)\$(PackageId.ToLower())" />
 

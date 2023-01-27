@@ -27,7 +27,7 @@ jobs:
 
       - name: Build Project
         id: build
-        run: dotnet build ./${GITHUB_REF##refs/heads/release/nuget/} -warnaserror -c Release
+        run: dotnet build ./${GITHUB_REF##refs/heads/release/nuget/} -warnaserror -c Release -p:GeneratePackageOnBuild=true
 
       - name: Publish Package
         env:
