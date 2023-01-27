@@ -45,6 +45,42 @@ Any file with the name `_Package` will be packed with `$(PackageId)` instead. Fo
 #### TFM Placeholder
 A target framework-moniker(TFM) placeholder refers to a file named `_._` in the NuGet package under the directories `lib/**/_._`. The purpose of this file is indicate a package supports a particular target framework, but does not have any binaries for that target framework. This file can be added automatically by setting the MSBuild property `AddTFMPlaceholder` to true in the project file.
 
+### Pack-Only Projects
+Pack-only projects are projects that generate NuGet packages with no assemblies and usually don't use compilation. These include packages that deliver build configuration, packages that add static source files, and packages that contain templates.
+
+#### Creation
+All pack-only projects must be under `src/pack`, so create a folder for the pack-only project under `src/pack`. Then add a C# project file* at `src/pack/<PROJECT_NAME>/<PROJECT_NAME>.csproj` with the following contents:
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Package Information -->
+  <PropertyGroup>
+    <Copyright>Copyright © 2022 Arthri</Copyright>
+    <Description>Automatically sets the assembly version to the last major version.</Description>
+    <DevelopmentDependency>true</DevelopmentDependency>
+    <PackageTags>msbuild;semver;semantic;version;versioning</PackageTags>
+    <Title>Auto Assembly Version</Title>
+    <Version>1.0.0.0</Version>
+  </PropertyGroup>
+
+</Project>
+```
+Add or remove package information as needed.
+
+An example of an exception to the standard pack-only project is `src/pack/Belp.Build.PseudoKeywords`, which uses compilation for verification, but does not pack output binaries for the NuGet package.
+
+*: It is easier to use C# projects than to engineer a new project format.
+
+#### Configuration
+`src/pack/Directory.Build.props` and `src/pack/Directory.Build.targets` specifies the default configuration options to make pack-only projects as simple as possible. The following are the configuration options automatically set
+- `AddTFMPlaceholder` = `true`
+- `BuildDependsOn` = `` (cleared out; blank)
+- `Configuration` = `Release`
+- `Configurations` = `Release`
+- `EnableDefaultItems` = `false`
+- `IncludeBuildOutput` = `false`
+- `TargetFramework` = `netstandard2.0`
+
 ## Contacts
 - @Arthri
     - Email: mailto://arthryxate@gmail.com
