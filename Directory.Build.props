@@ -20,7 +20,8 @@
 
 
 
-  <ItemGroup>
+  <!-- Package Assets Configuration -->
+  <ItemGroup Condition="'$(EnableDefaultItems)' == 'true'">
     <!-- Pack any files and folders under Assets/ -->
     <None Include="Assets\**\*" Pack="true" PackagePath="/" />
 
