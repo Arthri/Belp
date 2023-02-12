@@ -2,9 +2,10 @@
 
   <!-- Package Information -->
   <PropertyGroup>
-    <Copyright>Copyright © 2022 Arthri</Copyright>
+    <Authors>Arthri</Authors>
     <Description>Automatically sets the assembly version to the last major version.</Description>
     <DevelopmentDependency>true</DevelopmentDependency>
+    <InitialPublication>2023</InitialPublication>
     <PackageTags>msbuild;semver;semantic;version;versioning</PackageTags>
     <Title>Auto Assembly Version</Title>
     <Version>1.0.0.0</Version>

@@ -3,9 +3,9 @@
   <!-- Package Information -->
   <PropertyGroup>
     <Authors>Arthri</Authors>
-    <Copyright>Copyright © 2022 Arthri</Copyright>
     <Description>Helper source generators for manifest or embedded resources.</Description>
     <DevelopmentDependency>true</DevelopmentDependency>
+    <InitialPublication>2023</InitialPublication>
     <PackageId>Belp.CodeAnalysis.ManifestResourceGenerators</PackageId>
     <PackageTags>analyzers;csharp;codeanalysis;compiler;embedded;manifest;resource;sourcegenerator</PackageTags>
     <Title>Manifest Resource Source Generators</Title>

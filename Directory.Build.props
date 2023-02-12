@@ -9,9 +9,16 @@
 
 
 
+  <!-- Path Constants -->
+  <PropertyGroup>
+    <_TopLevelDirectory>$(MSBuildThisFileDirectory)</_TopLevelDirectory>
+    <_BuildScriptsDirectory>$(MSBuildThisFileDirectory)build/</_BuildScriptsDirectory>
+  </PropertyGroup>
+
+
+
   <!-- Package Information -->
   <PropertyGroup>
-    <Authors>Arthri</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/Arthri/Belp/</PackageProjectUrl>
     <PackageReadmeFile Condition="Exists('README.md') Or Exists('Assets/README.md')">README.md</PackageReadmeFile>
