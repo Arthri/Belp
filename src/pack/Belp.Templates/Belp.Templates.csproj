@@ -11,8 +11,9 @@
 
   <!-- Package Information -->
   <PropertyGroup>
-    <Copyright>Copyright © 2022 Arthri</Copyright>
+    <Authors>Arthri</Authors>
     <Description>Provides templates for MSBuild projects and other files.</Description>
+    <InitialPublication>2023</InitialPublication>
     <PackageTags>msbuild;template;templates</PackageTags>
     <PackageType>Template</PackageType>
     <Title>Belp Templates</Title>

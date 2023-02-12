@@ -10,9 +10,10 @@
 
   <!-- Package Information -->
   <PropertyGroup>
-    <Copyright>Copyright © 2022 Arthri</Copyright>
+    <Authors>Arthri</Authors>
     <Description>Adds new language keywords through global usings.</Description>
     <DevelopmentDependency>true</DevelopmentDependency>
+    <InitialPublication>2023</InitialPublication>
     <PackageTags>csharp;keyword</PackageTags>
     <Title>Pseudo Keywords</Title>
     <Version>1.0.1</Version>

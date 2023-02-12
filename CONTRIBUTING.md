@@ -31,7 +31,6 @@ All of the following builds the specified project(s) and pushes their NuGet pack
 
 ### Global Build Configuration
 The root-level `Directory.Build.props` and `Directory.Build.targets` apply configuration to all projects. A few examples are listed below.
-- `Authors` = `Arthri`
 - `PackageLicenseExpression` = `MIT`
 - `PackageProjectUrl` = `https://github.com/Arthri/Belp/`
 - `Product` = `Belp`
@@ -64,9 +63,10 @@ All pack-only projects must be under `src/pack`, so create a folder for the pack
 
   <!-- Package Information -->
   <PropertyGroup>
-    <Copyright>Copyright © 2022 Arthri</Copyright>
+    <Authors>Arthri</Authors>
     <Description>Automatically sets the assembly version to the last major version.</Description>
     <DevelopmentDependency>true</DevelopmentDependency>
+    <InitialPublication>2023</InitialPublication>
     <PackageTags>msbuild;semver;semantic;version;versioning</PackageTags>
     <Title>Auto Assembly Version</Title>
     <Version>1.0.0.0</Version>
