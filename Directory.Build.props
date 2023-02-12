@@ -13,6 +13,10 @@
   <PropertyGroup>
     <_TopLevelDirectory>$(MSBuildThisFileDirectory)</_TopLevelDirectory>
     <_BuildScriptsDirectory>$(MSBuildThisFileDirectory)build/</_BuildScriptsDirectory>
+    <_SourcesDirectory>$(MSBuildThisFileDirectory)src/</_SourcesDirectory>
+    <_InternalsDirectory>$(MSBuildThisFileDirectory)src/internal/</_InternalsDirectory>
+    <_LibrariesDirectory>$(MSBuildThisFileDirectory)src/libraries/</_LibrariesDirectory>
+    <_SourcesPackDirectory>$(MSBuildThisFileDirectory)src/pack/</_SourcesPackDirectory>
   </PropertyGroup>
 
 
