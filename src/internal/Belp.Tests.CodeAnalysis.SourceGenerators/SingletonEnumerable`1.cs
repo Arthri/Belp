@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace Belp.Tests;
+namespace Belp.Tests.CodeAnalysis.SourceGenerators;
 
 /// <summary>
 /// Supports a simple iteration over a collection of one element.

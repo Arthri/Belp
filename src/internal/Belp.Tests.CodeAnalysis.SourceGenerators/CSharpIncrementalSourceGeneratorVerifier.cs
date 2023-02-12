@@ -4,7 +4,7 @@ using Microsoft.CodeAnalysis.CSharp.Testing;
 using Microsoft.CodeAnalysis.Testing;
 using Microsoft.CodeAnalysis.Testing.Verifiers;
 
-namespace Belp.Tests;
+namespace Belp.Tests.CodeAnalysis.SourceGenerators;
 
 /// <summary>
 /// Provides a test for incremental source generators.

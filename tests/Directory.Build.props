@@ -26,7 +26,7 @@
 
   <!-- Add Global Usings -->
   <ItemGroup>
-    <Using Include="Belp.Tests" />
+    <Using Include="Belp.Tests.CodeAnalysis.SourceGenerators" />
     <Using Include="FluentAssertions" />
     <Using Include="Microsoft.CodeAnalysis.Testing" />
     <Using Include="Microsoft.CodeAnalysis.Text" />
@@ -49,7 +49,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <ProjectReference Include="$(MSBuildThisFileDirectory)../src/libraries/Belp.Tests/Belp.Tests.csproj" />
+    <ProjectReference Include="$(MSBuildThisFileDirectory)../src/internal/Belp.Tests.CodeAnalysis.SourceGenerators/Belp.Tests.CodeAnalysis.SourceGenerators.csproj" />
   </ItemGroup>
 
 

@@ -1,4 +1,4 @@
-﻿namespace Belp.Tests.Extensions;
+﻿namespace Belp.Tests.CodeAnalysis.SourceGenerators.Extensions;
 
 /// <summary>
 /// Provides extension methods for all types.

@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Belp.CodeAnalysis.ManifestR
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Belp.CodeAnalysis.ManifestResourceGenerators.UnitTests", "tests\Belp.CodeAnalysis.ManifestResourceGenerators.UnitTests\Belp.CodeAnalysis.ManifestResourceGenerators.UnitTests.csproj", "{059A03F7-2CA1-4CDA-A9BD-74A953B4668B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Belp.Tests", "src\internal\Belp.Tests\Belp.Tests.csproj", "{5E421087-517E-4942-881A-53E674F7014E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Belp.Tests.CodeAnalysis.SourceGenerators", "src\internal\Belp.Tests.CodeAnalysis.SourceGenerators\Belp.Tests.CodeAnalysis.SourceGenerators.csproj", "{5E421087-517E-4942-881A-53E674F7014E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

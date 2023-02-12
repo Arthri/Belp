@@ -1,7 +1,7 @@
 ﻿using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Testing;
 
-namespace Belp.Tests;
+namespace Belp.Tests.CodeAnalysis.SourceGenerators;
 
 /// <summary>
 /// Provides the global configuration for all tests.

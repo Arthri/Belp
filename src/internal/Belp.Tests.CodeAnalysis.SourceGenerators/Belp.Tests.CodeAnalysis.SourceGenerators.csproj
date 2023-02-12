@@ -18,7 +18,7 @@
 
 
   <ItemGroup>
-    <Using Include="Belp.Tests.Extensions" />
+    <Using Include="Belp.Tests.CodeAnalysis.SourceGenerators.Extensions" />
   </ItemGroup>
 
 

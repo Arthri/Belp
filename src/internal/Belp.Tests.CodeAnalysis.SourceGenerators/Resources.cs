@@ -1,4 +1,4 @@
-﻿namespace Belp.Tests;
+﻿namespace Belp.Tests.CodeAnalysis.SourceGenerators;
 
 /// <summary>
 /// Provides methods for reading or writing resources for the running.

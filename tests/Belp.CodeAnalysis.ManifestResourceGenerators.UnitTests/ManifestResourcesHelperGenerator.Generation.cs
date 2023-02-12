@@ -1,4 +1,4 @@
-﻿using SGTest = Belp.Tests.CSharpIncrementalSourceGeneratorVerifier<Belp.CodeAnalysis.ManifestResourceGenerators.ManifestResourcesHelperGenerator>.Test;
+﻿using SGTest = Belp.Tests.CodeAnalysis.SourceGenerators.CSharpIncrementalSourceGeneratorVerifier<Belp.CodeAnalysis.ManifestResourceGenerators.ManifestResourcesHelperGenerator>.Test;
 
 namespace Belp.CodeAnalysis.ManifestResourceGenerators.UnitTests;
 
