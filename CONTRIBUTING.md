@@ -11,6 +11,7 @@ Not accepted at the moment.
 1. Do the work.
 1. Add or update relevant documentation sections(if any).
 1. Add or update tests(if any).
+1. Add your name to the `<Authors>...</Authors>` section in the appropriate projects.
 
 ## Development
 
