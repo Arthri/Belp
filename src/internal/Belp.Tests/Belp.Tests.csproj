@@ -2,7 +2,17 @@
 
   <!-- Build Configuration -->
   <PropertyGroup>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <TargetFramework>net7.0</TargetFramework>
+  </PropertyGroup>
+
+
+
+  <!-- Compiler Configuration -->
+  <PropertyGroup>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
 
