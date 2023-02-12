@@ -1,0 +1,12 @@
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <ItemGroup>
+    <Using Include="Belp.Tests.CodeAnalysis.SourceGenerators" />
+  </ItemGroup>
+
+  <!-- Dependencies-->
+  <ItemGroup>
+    <ProjectReference Include="$(_InternalsDirectory)Belp.Tests.CodeAnalysis.SourceGenerators/Belp.Tests.CodeAnalysis.SourceGenerators.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -26,7 +26,6 @@
 
   <!-- Add Global Usings -->
   <ItemGroup>
-    <Using Include="Belp.Tests.CodeAnalysis.SourceGenerators" />
     <Using Include="FluentAssertions" />
     <Using Include="Microsoft.CodeAnalysis.Testing" />
     <Using Include="Microsoft.CodeAnalysis.Text" />
@@ -49,7 +48,6 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <ProjectReference Include="$(MSBuildThisFileDirectory)../src/internal/Belp.Tests.CodeAnalysis.SourceGenerators/Belp.Tests.CodeAnalysis.SourceGenerators.csproj" />
   </ItemGroup>
 
 
@@ -58,5 +56,11 @@
   <ItemGroup>
     <Content Include="xunit.runner.json" Condition="Exists('xunit.runner.json')" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
+
+
+
+  <!-- Configure for specific test environments -->
+  <Import Project="$(_BuildConfigurationDirectory)tests/Belp.Tests.MSBuild.props" Condition="'$(TestingMSBuild)' == 'true' Or ('$(TestingMSBuild)' == '' And $(MSBuildProjectName.StartsWith('Belp.Build.')))" />
+  <Import Project="$(_BuildConfigurationDirectory)tests/Belp.Tests.CodeAnalysis.SourceGenerators.props" Condition="'$(TestingSourceGenerators)' == 'true' Or ('$(TestingSourceGenerators)' == '' And $(MSBuildProjectName.StartsWith('Belp.CodeAnalysis.')))" />
 
 </Project>
