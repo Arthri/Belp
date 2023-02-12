@@ -21,7 +21,6 @@
   <PropertyGroup>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/Arthri/Belp/</PackageProjectUrl>
-    <PackageReadmeFile Condition="Exists('README.md') Or Exists('Assets/README.md')">README.md</PackageReadmeFile>
     <Product>Belp</Product>
   </PropertyGroup>
 
@@ -31,6 +30,8 @@
   <PropertyGroup>
     <!-- Prevent duplicated items -->
     <DefaultItemExcludes Condition="'$(EnableDefaultPackItems)' != 'false'">$(DefaultItemExcludes);Assets\**\*</DefaultItemExcludes>
+
+    <PackageReadmeFile Condition="Exists('README.md') Or Exists('Assets/README.md')">README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup Condition="'$(EnableDefaultPackItems)' != 'false'">
