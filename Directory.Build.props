@@ -14,7 +14,7 @@
     <_TopLevelDirectory>$(MSBuildThisFileDirectory)</_TopLevelDirectory>
     <_BuildConfigurationDirectory>$(MSBuildThisFileDirectory)build/</_BuildConfigurationDirectory>
     <_SourcesDirectory>$(MSBuildThisFileDirectory)src/</_SourcesDirectory>
-    <_InternalsDirectory>$(MSBuildThisFileDirectory)src/internal/</_InternalsDirectory>
+    <_InternalsDirectory>$(MSBuildThisFileDirectory)src/internals/</_InternalsDirectory>
     <_LibrariesDirectory>$(MSBuildThisFileDirectory)src/libraries/</_LibrariesDirectory>
     <_SourcesPackDirectory>$(MSBuildThisFileDirectory)src/pack/</_SourcesPackDirectory>
   </PropertyGroup>
