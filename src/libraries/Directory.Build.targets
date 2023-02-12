@@ -9,6 +9,6 @@
 
 
 
-  <Import Project="$(_BuildScriptsDirectory)targets/Belp.Build.Autocopyright.targets" />
+  <Import Project="$(_BuildConfigurationDirectory)targets/Belp.Build.Autocopyright.targets" />
 
 </Project>
