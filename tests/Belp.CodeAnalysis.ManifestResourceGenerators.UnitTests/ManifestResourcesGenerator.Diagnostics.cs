@@ -42,7 +42,7 @@ public partial class ManifestResourcesGenerator
                             """
                             [/File.txt.]
                             build_metadata.AdditionalFiles.ManifestResourceName = File.txt.
-                            build_metadata.AdditionalFiles.TargetSourceGenerator = ManifestResourcesGenerator
+                            build_metadata.AdditionalFiles.TargetSourceGenerator = Belp.CodeAnalysis.ManifestResourceGenerators.ManifestResourcesGenerator
                             """
                         ),
                     },
@@ -75,7 +75,7 @@ public partial class ManifestResourcesGenerator
                             """
                             [/File.txt]
                             build_metadata.AdditionalFiles.ManifestResourceName =
-                            build_metadata.AdditionalFiles.TargetSourceGenerator = ManifestResourcesGenerator
+                            build_metadata.AdditionalFiles.TargetSourceGenerator = Belp.CodeAnalysis.ManifestResourceGenerators.ManifestResourcesGenerator
                             """
                         ),
                     },
@@ -108,7 +108,7 @@ public partial class ManifestResourcesGenerator
                             """
                             [/File]
                             build_metadata.AdditionalFiles.ManifestResourceName = File
-                            build_metadata.AdditionalFiles.TargetSourceGenerator = ManifestResourcesGenerator
+                            build_metadata.AdditionalFiles.TargetSourceGenerator = Belp.CodeAnalysis.ManifestResourceGenerators.ManifestResourcesGenerator
                             """
                         ),
                     },
@@ -141,7 +141,7 @@ public partial class ManifestResourcesGenerator
                             """
                             [/File..txt]
                             build_metadata.AdditionalFiles.ManifestResourceName = File..txt
-                            build_metadata.AdditionalFiles.TargetSourceGenerator = ManifestResourcesGenerator
+                            build_metadata.AdditionalFiles.TargetSourceGenerator = Belp.CodeAnalysis.ManifestResourceGenerators.ManifestResourcesGenerator
                             """
                         ),
                     },
