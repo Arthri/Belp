@@ -2,6 +2,8 @@
 
   <ItemGroup>
     <Using Include="Belp.Tests.CodeAnalysis.SourceGenerators" />
+    <Using Include="Microsoft.CodeAnalysis.Testing" />
+    <Using Include="Microsoft.CodeAnalysis.Text" />
   </ItemGroup>
 
   <!-- Dependencies-->
