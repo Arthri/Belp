@@ -12,12 +12,4 @@
     <ProjectReference Include="..\..\src\libraries\codeanalysis\Belp.CodeAnalysis.ManifestResourceGenerators\Belp.CodeAnalysis.ManifestResourceGenerators.csproj" />
   </ItemGroup>
 
-
-
-  <!-- Copy files in Resources/**/* folder to output -->
-  <ItemGroup Condition="'$(EnableDefaultItems)' == 'true' And '$(EnableDefaultNoneItems)' == 'true'">
-    <None Update="Resources\**\*" CopyToOutputDirectory="PreserveNewest" />
-    <Compile Update="Resources\**\*" CopyToOutputDirectory="PreserveNewest" />
-  </ItemGroup>
-
 </Project>
