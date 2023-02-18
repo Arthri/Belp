@@ -2,7 +2,7 @@
 
   <Target Name="_AddEmbeddedResourcesToAdditionalFiles" Condition="'$(ManifestResourceGenerators_DisableAutoEmbeddedResourcesInclude)' != 'true'" DependsOnTargets="PrepareResourceNames" AfterTargets="PrepareResourceNames" BeforeTargets="GenerateMSBuildEditorConfigFile;GenerateMSBuildEditorConfigFileShouldRun;BeforeCompile;Compile;CoreCompile">
     <ItemGroup>
-      <AdditionalFiles Include="@(EmbeddedResource)" TargetSourceGenerator="ManifestResourcesGenerator" />
+      <AdditionalFiles Include="@(EmbeddedResource)" TargetSourceGenerator="Belp.CodeAnalysis.ManifestResourceGenerators" />
     </ItemGroup>
   </Target>
 

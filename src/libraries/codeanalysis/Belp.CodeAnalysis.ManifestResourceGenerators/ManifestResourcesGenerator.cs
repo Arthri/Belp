@@ -39,7 +39,7 @@ public class ManifestResourcesGenerator : IIncrementalGenerator
                 AnalyzerConfigOptions options = analyzerOptions.GetOptions(additionalText);
 
                 return options.TryGetValue("build_metadata.AdditionalFiles.TargetSourceGenerator", out string? targetSourceGenerator)
-                    && targetSourceGenerator == "ManifestResourcesGenerator"
+                    && targetSourceGenerator == typeof(ManifestResourcesGenerator).FullName
                     && options.TryGetValue("build_metadata.AdditionalFiles.ManifestResourceName", out string? manifestResourceName)
                     ? ImmutableArray.Create(manifestResourceName)
                     : ImmutableArray<string>.Empty
