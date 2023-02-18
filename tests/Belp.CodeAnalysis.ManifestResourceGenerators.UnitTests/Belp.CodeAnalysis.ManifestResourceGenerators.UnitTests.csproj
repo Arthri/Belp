@@ -9,12 +9,6 @@
 
   <!-- Dependencies -->
   <ItemGroup>
-    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.4-beta1.22559.1">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.SourceGenerators.Testing.XUnit" Version="1.1.2-beta1.22531.1" />
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.4.0" />
     <ProjectReference Include="..\..\src\libraries\codeanalysis\Belp.CodeAnalysis.ManifestResourceGenerators\Belp.CodeAnalysis.ManifestResourceGenerators.csproj" />
   </ItemGroup>
 
