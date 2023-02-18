@@ -1,4 +1,4 @@
-﻿using Microsoft.CodeAnalysis.Diagnostics;
+using Microsoft.CodeAnalysis.Diagnostics;
 using System.Collections.Immutable;
 using System.Diagnostics.CodeAnalysis;
 using System.Text;
@@ -131,9 +131,9 @@ public class ManifestResourcesGenerator : IIncrementalGenerator
             return DiagnosticDescriptors.SourceGenerators.ManifestResourcesGenerator.MRGN4003;
         }
 
-        if (resourceName[^1] == '.')
+        if (resourceName.IndexOf('.') == -1)
         {
-            return DiagnosticDescriptors.SourceGenerators.ManifestResourcesGenerator.MRGN4002;
+            return DiagnosticDescriptors.SourceGenerators.ManifestResourcesGenerator.MRGN4004;
         }
 
         if (resourceName.Contains(".."))
@@ -142,9 +142,9 @@ public class ManifestResourcesGenerator : IIncrementalGenerator
         }
 
 #pragma warning disable IDE0046 // Convert to conditional expression
-        if (resourceName.IndexOf('.') == -1)
+        if (resourceName[^1] == '.')
         {
-            return DiagnosticDescriptors.SourceGenerators.ManifestResourcesGenerator.MRGN4004;
+            return DiagnosticDescriptors.SourceGenerators.ManifestResourcesGenerator.MRGN4002;
         }
 
         return null;
