@@ -21,7 +21,7 @@
       Change _Package to $(PackageId) to make forking easier
       Must be in targets because PackageId not available in props
     -->
-    <None Update="**\_Package.*" PackagePath="%(RecursiveDir)$(PackageId)%(Extension)" Link="%(RecursiveDir)$(PackageId)%(Extension)" />
+    <None Update="**\_Package.*" PackagePath="%(RecursiveDir)$(PackageId)%(Extension)" Link="%(RelativeDir)$(PackageId)%(Extension)" />
   </ItemGroup>
 
 
