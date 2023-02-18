@@ -1,14 +1,14 @@
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
   <ItemGroup>
-    <Using Include="Belp.Tests.MSBuild" />
+    <Using Include="Belp.Tests.MSBuild.xUnit" />
   </ItemGroup>
 
 
 
   <!-- Dependencies -->
   <ItemGroup>
-    <ProjectReference Include="$(_InternalsDirectory)Belp.Tests.MSBuild/Belp.Tests.MSBuild.csproj" />
+    <ProjectReference Include="$(_InternalsDirectory)Belp.Tests.MSBuild.xUnit/Belp.Tests.MSBuild.xUnit.csproj" />
   </ItemGroup>
 
 </Project>
