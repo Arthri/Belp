@@ -107,7 +107,7 @@ public class ManifestResourcesGenerator : IIncrementalGenerator
     /// </summary>
     /// <param name="assemblyName">The assembly name to check.</param>
     /// <returns>A result representing the validity of the specified assembly name.</returns>
-    public static CheckAssemblyNameResult CheckAssemblyName(string? assemblyName)
+    public static CheckAssemblyNameResult CheckAssemblyName([NotNullWhen(true)] string? assemblyName)
     {
 #pragma warning disable IDE0046 // Convert to conditional expression
         if (assemblyName is null || assemblyName.Length < 1)
@@ -124,7 +124,7 @@ public class ManifestResourcesGenerator : IIncrementalGenerator
     /// </summary>
     /// <param name="resourceName">The resource name to check.</param>
     /// <returns>A result representing the validity of the specified assembly name.</returns>
-    public static CheckResourceNameResult CheckResourceName(string? resourceName)
+    public static CheckResourceNameResult CheckResourceName([NotNullWhen(true)] string? resourceName)
     {
         if (resourceName is null or { Length: 0 })
         {

@@ -8,7 +8,7 @@ public enum CheckAssemblyNameResult
     /// <summary>
     /// Indicates the assembly name is valid.
     /// </summary>
-    Valid = 200,
+    Valid = 1,
 
     /// <summary>
     /// Indicates the assembly name is null or has zero length.

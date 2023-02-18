@@ -8,7 +8,7 @@ public enum CheckResourceNameResult
     /// <summary>
     /// Indicates the resource name is valid.
     /// </summary>
-    Valid = 200,
+    Valid = 1,
 
     /// <summary>
     /// Indicates the resource name ends with a dot.
