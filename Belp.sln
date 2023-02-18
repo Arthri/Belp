@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Belp.Tests.CodeAnalysis.Sou
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Belp.Tests.MSBuild", "src\internals\Belp.Tests.MSBuild\Belp.Tests.MSBuild.csproj", "{7AECE10B-AF95-42E7-8DCB-B03273509DC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Belp.Build.Autoasmver.IntegrationTests", "tests\Belp.Build.Autoasmver.IntegrationTests\Belp.Build.Autoasmver.IntegrationTests.csproj", "{D83F96D7-5581-4091-9C7D-E99B7CE449AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Belp.Build.Autoasmver.IntegrationTests", "tests\Belp.Build.Autoasmver.IntegrationTests\Belp.Build.Autoasmver.IntegrationTests.csproj", "{D83F96D7-5581-4091-9C7D-E99B7CE449AC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
