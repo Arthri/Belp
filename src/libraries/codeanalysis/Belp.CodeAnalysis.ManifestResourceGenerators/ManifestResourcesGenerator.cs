@@ -1,4 +1,4 @@
-using Microsoft.CodeAnalysis.Diagnostics;
+﻿using Microsoft.CodeAnalysis.Diagnostics;
 using System.Collections.Immutable;
 using System.Diagnostics.CodeAnalysis;
 using System.Text;
@@ -18,11 +18,11 @@ public class ManifestResourcesGenerator : IIncrementalGenerator
 
         context.RegisterSourceOutput(assemblyName, static (context, assemblyName) =>
         {
-            if (CheckAssemblyName(assemblyName) is { } checkAssemblyNameResult)
+            if (CheckAssemblyName(assemblyName).ToDescriptor() is { } checkAssemblyNameDescriptor)
             {
                 context.ReportDiagnostic(
                     Diagnostic.Create(
-                        checkAssemblyNameResult,
+                        checkAssemblyNameDescriptor,
                         Location.None
                     )
                 );
@@ -58,7 +58,7 @@ public class ManifestResourcesGenerator : IIncrementalGenerator
 
                 foreach (string? resourceName in resouceNames)
                 {
-                    if (CheckResourceName(resourceName) is not null)
+                    if (CheckResourceName(resourceName) is not CheckResourceNameResult.Valid)
                     {
                         // Diagnostic report is handled elsewhere
                         continue;
@@ -106,16 +106,16 @@ public class ManifestResourcesGenerator : IIncrementalGenerator
     /// Determines if the specified assembly name is valid.
     /// </summary>
     /// <param name="assemblyName">The assembly name to check.</param>
-    /// <returns><see langword="null"/> if the specified assembly name is valid; otherwise, a diagnostic descriptor describing the invalidity.</returns>
-    public static DiagnosticDescriptor? CheckAssemblyName([NotNullWhen(false)] string? assemblyName)
+    /// <returns>A result representing the validity of the specified assembly name.</returns>
+    public static CheckAssemblyNameResult CheckAssemblyName(string? assemblyName)
     {
 #pragma warning disable IDE0046 // Convert to conditional expression
         if (assemblyName is null || assemblyName.Length < 1)
         {
-            return (DiagnosticDescriptor?)DiagnosticDescriptors.SourceGenerators.MRG4001;
+            return CheckAssemblyNameResult.NullOrEmpty;
         }
 
-        return null;
+        return CheckAssemblyNameResult.Valid;
 #pragma warning restore IDE0046 // Convert to conditional expression
     }
 
@@ -123,31 +123,31 @@ public class ManifestResourcesGenerator : IIncrementalGenerator
     /// Determines if the specified resource name is valid.
     /// </summary>
     /// <param name="resourceName">The resource name to check.</param>
-    /// <returns><see langword="null"/> if the specified resource name is valid; otherwise, a diagnostic descriptor describing the invalidity.</returns>
-    public static DiagnosticDescriptor? CheckResourceName([NotNullWhen(false)] string? resourceName)
+    /// <returns>A result representing the validity of the specified assembly name.</returns>
+    public static CheckResourceNameResult CheckResourceName(string? resourceName)
     {
         if (resourceName is null or { Length: 0 })
         {
-            return DiagnosticDescriptors.SourceGenerators.ManifestResourcesGenerator.MRGN4003;
+            return CheckResourceNameResult.NullOrEmpty;
         }
 
         if (resourceName.IndexOf('.') == -1)
         {
-            return DiagnosticDescriptors.SourceGenerators.ManifestResourcesGenerator.MRGN4004;
+            return CheckResourceNameResult.ContainsNoDots;
         }
 
         if (resourceName.Contains(".."))
         {
-            return DiagnosticDescriptors.SourceGenerators.ManifestResourcesGenerator.MRGN4005;
+            return CheckResourceNameResult.ContainsConsecutiveDots;
         }
 
 #pragma warning disable IDE0046 // Convert to conditional expression
         if (resourceName[^1] == '.')
         {
-            return DiagnosticDescriptors.SourceGenerators.ManifestResourcesGenerator.MRGN4002;
+            return CheckResourceNameResult.EndsWithDot;
         }
 
-        return null;
+        return CheckResourceNameResult.Valid;
 #pragma warning restore IDE0046 // Convert to conditional expression
     }
 
@@ -224,16 +224,16 @@ public class ManifestResourcesGenerator : IIncrementalGenerator
     {
         (string resourceName, string? assemblyName) = info;
 
-        if (CheckAssemblyName(assemblyName) is { } assemblyNameCheckResult)
+        if (CheckAssemblyName(assemblyName) is not CheckAssemblyNameResult.Valid)
         {
             return;
         }
 
-        if (CheckResourceName(resourceName) is { } resourceNameCheckResult)
+        if (CheckResourceName(resourceName).ToDescriptor() is { } resourceNameCheckDescriptor)
         {
             context.ReportDiagnostic(
                 Diagnostic.Create(
-                    resourceNameCheckResult,
+                    resourceNameCheckDescriptor,
                     Location.None
                 )
             );
@@ -280,7 +280,7 @@ public class ManifestResourcesGenerator : IIncrementalGenerator
     )
     {
         (ResourceNamespace resourceNamespace, string? assemblyName) = info;
-        if (CheckAssemblyName(assemblyName) is { })
+        if (CheckAssemblyName(assemblyName) is not CheckAssemblyNameResult.Valid)
         {
             return;
         }
