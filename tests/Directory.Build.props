@@ -58,7 +58,12 @@
 
 
   <!-- Configure for specific test environments -->
-  <Import Project="$(_BuildConfigurationDirectory)tests/Belp.Tests.MSBuild.props" Condition="'$(TestingMSBuild)' == 'true' Or ('$(TestingMSBuild)' == '' And $(MSBuildProjectName.StartsWith('Belp.Build.')))" />
-  <Import Project="$(_BuildConfigurationDirectory)tests/Belp.Tests.CodeAnalysis.SourceGenerators.props" Condition="'$(TestingSourceGenerators)' == 'true' Or ('$(TestingSourceGenerators)' == '' And $(MSBuildProjectName.StartsWith('Belp.CodeAnalysis.')))" />
+  <PropertyGroup>
+    <TestingMSBuild Condition="'$(TestingMSBuild)' == ''">$(MSBuildProjectName.StartsWith('Belp.Build.'))</TestingMSBuild>
+    <TestingSourceGenerators Condition="'$(TestingSourceGenerators)' == ''">$(MSBuildProjectName.StartsWith('Belp.CodeAnalysis.'))</TestingSourceGenerators>
+  </PropertyGroup>
+
+  <Import Project="$(_BuildConfigurationDirectory)tests/Belp.Tests.MSBuild.props" Condition="'$(TestingMSBuild)' == 'true'" />
+  <Import Project="$(_BuildConfigurationDirectory)tests/Belp.Tests.CodeAnalysis.SourceGenerators.props" Condition="'$(TestingSourceGenerators)' == 'true'" />
 
 </Project>
