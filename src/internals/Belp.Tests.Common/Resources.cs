@@ -1,4 +1,4 @@
-﻿namespace Belp.Tests.CodeAnalysis.SourceGenerators;
+﻿namespace Belp.Tests.Common;
 
 /// <summary>
 /// Provides methods for reading or writing resources for the running.
@@ -9,7 +9,7 @@ public static partial class Resources
     /// Gets the base resources path.
     /// </summary>
     public static string BasePath { get; } = Path.Combine(
-        Path.GetDirectoryName(typeof(Resources).Assembly.Location) ?? "/",
+        Path.GetDirectoryName(typeof(Resources).Assembly.Location) ?? Environment.CurrentDirectory,
         "Resources"
     );
 }

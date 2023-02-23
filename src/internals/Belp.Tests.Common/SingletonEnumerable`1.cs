@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 
-namespace Belp.Tests.CodeAnalysis.SourceGenerators;
+namespace Belp.Tests.Common;
 
 /// <summary>
 /// Supports a simple iteration over a collection of one element.
 /// </summary>
 /// <typeparam name="T">The type of objects to enumerate.</typeparam>
-internal sealed class SingletonEnumerable<T> : IEnumerable<T>
+public sealed class SingletonEnumerable<T> : IEnumerable<T>
 {
     /// <summary>
     /// Supports a simple iteration over one element.

@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Belp.Tests.MSBuild.xUnit", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Belp.Build.Autoasmver.IntegrationTests", "tests\Belp.Build.Autoasmver.IntegrationTests\Belp.Build.Autoasmver.IntegrationTests.csproj", "{D83F96D7-5581-4091-9C7D-E99B7CE449AC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Belp.Tests.Common", "src\internals\Belp.Tests.Common\Belp.Tests.Common.csproj", "{A84BDD2C-A917-4A1B-AF03-25DC030129B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{D83F96D7-5581-4091-9C7D-E99B7CE449AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D83F96D7-5581-4091-9C7D-E99B7CE449AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D83F96D7-5581-4091-9C7D-E99B7CE449AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A84BDD2C-A917-4A1B-AF03-25DC030129B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A84BDD2C-A917-4A1B-AF03-25DC030129B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A84BDD2C-A917-4A1B-AF03-25DC030129B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A84BDD2C-A917-4A1B-AF03-25DC030129B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -26,7 +26,9 @@
 
   <!-- Add Global Usings -->
   <ItemGroup>
+    <Using Include="Belp.Tests.Common" />
     <Using Include="FluentAssertions" />
+    <Using Include="System.Collections" />
     <Using Include="System.Text" />
     <Using Include="Xunit" />
   </ItemGroup>

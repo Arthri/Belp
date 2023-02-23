@@ -1,9 +1,11 @@
-﻿namespace Belp.Tests.CodeAnalysis.SourceGenerators.Extensions;
+﻿using Belp.Tests.Common;
 
 /// <summary>
-/// Provides extension methods for all types.
+/// Globally provides extensions to all types.
 /// </summary>
-internal static class AllExtensions
+#pragma warning disable CA1050 // Declare types in namespaces
+public static class GlobalAllExtensions
+#pragma warning restore CA1050 // Declare types in namespaces
 {
     /// <summary>
     /// Wraps the specified element in a singleton enumerable.
