@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <!-- Build Configuration -->
   <PropertyGroup>
@@ -19,6 +19,7 @@
 
   <!-- Dependencies -->
   <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="6.7.0" />
     <PackageReference Include="Microsoft.Build" Version="15.9.20" ExcludeAssets="runtime" />
     <PackageReference Include="Microsoft.Build.Locator" Version="1.5.5" />
     <PackageReference Include="Xunit.Abstractions" Version="2.0.3" />
