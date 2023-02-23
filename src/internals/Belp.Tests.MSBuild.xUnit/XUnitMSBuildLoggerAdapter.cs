@@ -3,6 +3,9 @@ using Xunit.Abstractions;
 
 namespace Belp.Tests.MSBuild.xUnit;
 
+/// <summary>
+/// Provides an adapter for <see cref="ITestOutputHelper"/> to <see cref="ILogger"/>.
+/// </summary>
 public class XUnitMSBuildLoggerAdapter : ITestOutputHelper, ILogger
 {
     private readonly ITestOutputHelper _output;
@@ -19,6 +22,10 @@ public class XUnitMSBuildLoggerAdapter : ITestOutputHelper, ILogger
     /// <inheritdoc />
     public LoggerVerbosity Verbosity { get; set; } = LoggerVerbosity.Normal;
 
+    /// <summary>
+    /// Initializes a new instance of <see cref="XUnitMSBuildLoggerAdapter"/> for the specified <paramref name="output"/>.
+    /// </summary>
+    /// <param name="output">The <see cref="ITestOutputHelper"/> to adapt.</param>
     public XUnitMSBuildLoggerAdapter(ITestOutputHelper output)
     {
         _output = output;
