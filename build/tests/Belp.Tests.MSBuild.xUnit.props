@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <Using Include="Belp.Tests.MSBuild.xUnit" />
+    <Using Include="Microsoft.Build.Execution" />
   </ItemGroup>
 
 
