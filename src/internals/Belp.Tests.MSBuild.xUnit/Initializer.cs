@@ -1,7 +1,7 @@
 ﻿using Microsoft.Build.Locator;
 using System.Runtime.CompilerServices;
 
-file static class Initializer
+static file class Initializer
 {
     [ModuleInitializer]
     public static void InitializeModule()
