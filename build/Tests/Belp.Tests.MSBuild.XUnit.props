@@ -1,7 +1,7 @@
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
   <ItemGroup>
-    <Using Include="Belp.Tests.MSBuild.xUnit" />
+    <Using Include="Belp.Tests.MSBuild.XUnit" />
     <Using Include="Microsoft.Build.Execution" />
     <Using Include="Xunit.Abstractions.ITestOutputHelper" Alias="ITestOutputHelper" />
   </ItemGroup>
@@ -10,7 +10,7 @@
 
   <!-- Dependencies -->
   <ItemGroup>
-    <ProjectReference Include="$(_InternalsDirectory)Belp.Tests.MSBuild.xUnit/Belp.Tests.MSBuild.xUnit.csproj" />
+    <ProjectReference Include="$(_InternalsDirectory)Belp.Tests.MSBuild.XUnit/Belp.Tests.MSBuild.XUnit.csproj" />
   </ItemGroup>
 
 </Project>

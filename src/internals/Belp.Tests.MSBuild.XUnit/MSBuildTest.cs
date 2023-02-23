@@ -2,7 +2,7 @@
 using Microsoft.Build.Execution;
 using Xunit.Abstractions;
 
-namespace Belp.Tests.MSBuild.xUnit;
+namespace Belp.Tests.MSBuild.XUnit;
 
 /// <summary>
 /// Provides the boilerplate for testing MSBuild projects.
