@@ -25,9 +25,9 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
 
-      - name: Build Project
+      - name: Build & Pack Project
         id: build
-        run: dotnet build ./${GITHUB_REF##refs/heads/release/nuget/} -warnaserror -c Release -p:GeneratePackageOnBuild=true
+        run: dotnet pack ./${GITHUB_REF##refs/heads/release/nuget/} -warnaserror -c Release
 
       - name: Publish Package
         env:
