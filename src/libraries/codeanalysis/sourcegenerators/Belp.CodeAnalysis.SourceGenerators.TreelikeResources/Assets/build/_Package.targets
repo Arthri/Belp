@@ -2,7 +2,7 @@
 
   <Target Name="_AddEmbeddedResourcesToAdditionalFiles" Condition="'$(TreelikeResources_DisableAutoEmbeddedResourcesInclude)' != 'true'" DependsOnTargets="PrepareResourceNames" AfterTargets="PrepareResourceNames" BeforeTargets="GenerateMSBuildEditorConfigFile;GenerateMSBuildEditorConfigFileShouldRun;BeforeCompile;Compile;CoreCompile">
     <ItemGroup>
-      <AdditionalFiles Include="@(EmbeddedResource)" TargetSourceGenerator="Belp.CodeAnalysis.SourceGenerators.TreelikeResources.ResourceTreeGenerator" />
+      <AdditionalFiles Include="@(EmbeddedResource)" TargetSourceGenerator="Belp.CodeAnalysis.SourceGenerators.TreelikeResources.ResourcesTreeGenerator" />
     </ItemGroup>
   </Target>
 

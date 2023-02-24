@@ -9,7 +9,7 @@ namespace Belp.CodeAnalysis.SourceGenerators.TreelikeResources;
 /// Provides the generation of strongly typed manifest resource names.
 /// </summary>
 [Generator(LanguageNames.CSharp)]
-public class ResourceTreeGenerator : IIncrementalGenerator
+public class ResourcesTreeGenerator : IIncrementalGenerator
 {
     /// <inheritdoc />
     public void Initialize(IncrementalGeneratorInitializationContext context)
@@ -39,7 +39,7 @@ public class ResourceTreeGenerator : IIncrementalGenerator
                 AnalyzerConfigOptions options = analyzerOptions.GetOptions(additionalText);
 
                 return options.TryGetValue("build_metadata.AdditionalFiles.TargetSourceGenerator", out string? targetSourceGenerator)
-                    && targetSourceGenerator == typeof(ResourceTreeGenerator).FullName
+                    && targetSourceGenerator == typeof(ResourcesTreeGenerator).FullName
                     && options.TryGetValue("build_metadata.AdditionalFiles.ManifestResourceName", out string? manifestResourceName)
                     ? ImmutableArray.Create(manifestResourceName)
                     : ImmutableArray<string>.Empty

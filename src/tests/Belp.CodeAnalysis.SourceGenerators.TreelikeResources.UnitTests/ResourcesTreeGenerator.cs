@@ -1,5 +1,5 @@
 ﻿namespace Belp.CodeAnalysis.SourceGenerators.TreelikeResources.UnitTests;
 
-public static partial class ResourceTreeGenerator
+public static partial class ResourcesTreeGenerator
 {
 }

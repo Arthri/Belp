@@ -16,10 +16,10 @@ public static class CheckResourceNameResultExtensions
         return result switch
         {
             CheckResourceNameResult.Valid => null,
-            CheckResourceNameResult.EndsWithDot => DiagnosticDescriptors.SourceGenerators.ResourceTreeGenerator.MRGN4002,
-            CheckResourceNameResult.NullOrEmpty => DiagnosticDescriptors.SourceGenerators.ResourceTreeGenerator.MRGN4003,
-            CheckResourceNameResult.ContainsNoDots => DiagnosticDescriptors.SourceGenerators.ResourceTreeGenerator.MRGN4004,
-            CheckResourceNameResult.ContainsConsecutiveDots => DiagnosticDescriptors.SourceGenerators.ResourceTreeGenerator.MRGN4005,
+            CheckResourceNameResult.EndsWithDot => DiagnosticDescriptors.SourceGenerators.ResourcesTreeGenerator.MRGN4002,
+            CheckResourceNameResult.NullOrEmpty => DiagnosticDescriptors.SourceGenerators.ResourcesTreeGenerator.MRGN4003,
+            CheckResourceNameResult.ContainsNoDots => DiagnosticDescriptors.SourceGenerators.ResourcesTreeGenerator.MRGN4004,
+            CheckResourceNameResult.ContainsConsecutiveDots => DiagnosticDescriptors.SourceGenerators.ResourcesTreeGenerator.MRGN4005,
             _ => throw new ArgumentOutOfRangeException(nameof(result)),
         };
     }

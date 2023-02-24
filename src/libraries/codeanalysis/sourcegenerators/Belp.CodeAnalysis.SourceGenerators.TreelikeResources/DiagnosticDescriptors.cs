@@ -11,9 +11,9 @@ public static partial class DiagnosticDescriptors
     public static partial class SourceGenerators
     {
         /// <summary>
-        /// Provides diagnostics for <see cref="ResourceTreeGenerator"/>.
+        /// Provides diagnostics for <see cref="ResourcesTreeGenerator"/>.
         /// </summary>
-        public static partial class ResourceTreeGenerator
+        public static partial class ResourcesTreeGenerator
         {
             /// <summary>
             /// Represents an error raised when a resource name ends with a period.

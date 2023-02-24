@@ -1,8 +1,8 @@
-﻿using SGTest = Belp.Tests.CodeAnalysis.SourceGenerators.CSharpIncrementalSourceGeneratorVerifier<Belp.CodeAnalysis.SourceGenerators.TreelikeResources.ResourceTreeGenerator>.Test;
+﻿using SGTest = Belp.Tests.CodeAnalysis.SourceGenerators.CSharpIncrementalSourceGeneratorVerifier<Belp.CodeAnalysis.SourceGenerators.TreelikeResources.ResourcesTreeGenerator>.Test;
 
 namespace Belp.CodeAnalysis.SourceGenerators.TreelikeResources.UnitTests;
 
-public partial class ResourceTreeGenerator
+public partial class ResourcesTreeGenerator
 {
     public partial class Generation
     {
@@ -26,7 +26,7 @@ public partial class ResourceTreeGenerator
         {
             public IEnumerator<object?[]> GetEnumerator()
             {
-                string testsPath = Path.Combine(Resources.Path, "ResourceTreeGenerator", "Generation");
+                string testsPath = Path.Combine(Resources.Path, "ResourcesTreeGenerator", "Generation");
                 string[] tests = Directory.GetDirectories(testsPath);
 
                 foreach (string test in tests)
@@ -51,7 +51,7 @@ public partial class ResourceTreeGenerator
                                 SourceText.From(File.ReadAllText(f), Encoding.UTF8)
                             )),
                             Outputs = outputs.Select(f => (
-                                typeof(TreelikeResources.ResourceTreeGenerator),
+                                typeof(TreelikeResources.ResourcesTreeGenerator),
                                 f[(outputsPath.Length + 1)..],
                                 SourceText.From(File.ReadAllText(f), Encoding.UTF8)
                             )),

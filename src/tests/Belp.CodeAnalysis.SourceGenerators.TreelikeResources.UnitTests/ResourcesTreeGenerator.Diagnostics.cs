@@ -1,8 +1,8 @@
-﻿using SGTest = Belp.Tests.CodeAnalysis.SourceGenerators.CSharpIncrementalSourceGeneratorVerifier<Belp.CodeAnalysis.SourceGenerators.TreelikeResources.ResourceTreeGenerator>.Test;
+﻿using SGTest = Belp.Tests.CodeAnalysis.SourceGenerators.CSharpIncrementalSourceGeneratorVerifier<Belp.CodeAnalysis.SourceGenerators.TreelikeResources.ResourcesTreeGenerator>.Test;
 
 namespace Belp.CodeAnalysis.SourceGenerators.TreelikeResources.UnitTests;
 
-public partial class ResourceTreeGenerator
+public partial class ResourcesTreeGenerator
 {
     public partial class Diagnostics
     {
@@ -42,14 +42,14 @@ public partial class ResourceTreeGenerator
                             """
                             [/File.txt.]
                             build_metadata.AdditionalFiles.ManifestResourceName = File.txt.
-                            build_metadata.AdditionalFiles.TargetSourceGenerator = Belp.CodeAnalysis.SourceGenerators.TreelikeResources.ResourceTreeGenerator
+                            build_metadata.AdditionalFiles.TargetSourceGenerator = Belp.CodeAnalysis.SourceGenerators.TreelikeResources.ResourcesTreeGenerator
                             """
                         ),
                     },
 
                     ExpectedDiagnostics =
                     {
-                        new DiagnosticResult(DiagnosticDescriptors.SourceGenerators.ResourceTreeGenerator.MRGN4002),
+                        new DiagnosticResult(DiagnosticDescriptors.SourceGenerators.ResourcesTreeGenerator.MRGN4002),
                     },
                 },
             };
@@ -75,14 +75,14 @@ public partial class ResourceTreeGenerator
                             """
                             [/File.txt]
                             build_metadata.AdditionalFiles.ManifestResourceName =
-                            build_metadata.AdditionalFiles.TargetSourceGenerator = Belp.CodeAnalysis.SourceGenerators.TreelikeResources.ResourceTreeGenerator
+                            build_metadata.AdditionalFiles.TargetSourceGenerator = Belp.CodeAnalysis.SourceGenerators.TreelikeResources.ResourcesTreeGenerator
                             """
                         ),
                     },
 
                     ExpectedDiagnostics =
                     {
-                        new DiagnosticResult(DiagnosticDescriptors.SourceGenerators.ResourceTreeGenerator.MRGN4003),
+                        new DiagnosticResult(DiagnosticDescriptors.SourceGenerators.ResourcesTreeGenerator.MRGN4003),
                     },
                 },
             };
@@ -108,14 +108,14 @@ public partial class ResourceTreeGenerator
                             """
                             [/File]
                             build_metadata.AdditionalFiles.ManifestResourceName = File
-                            build_metadata.AdditionalFiles.TargetSourceGenerator = Belp.CodeAnalysis.SourceGenerators.TreelikeResources.ResourceTreeGenerator
+                            build_metadata.AdditionalFiles.TargetSourceGenerator = Belp.CodeAnalysis.SourceGenerators.TreelikeResources.ResourcesTreeGenerator
                             """
                         ),
                     },
 
                     ExpectedDiagnostics =
                     {
-                        new DiagnosticResult(DiagnosticDescriptors.SourceGenerators.ResourceTreeGenerator.MRGN4004),
+                        new DiagnosticResult(DiagnosticDescriptors.SourceGenerators.ResourcesTreeGenerator.MRGN4004),
                     },
                 },
             };
@@ -141,14 +141,14 @@ public partial class ResourceTreeGenerator
                             """
                             [/File..txt]
                             build_metadata.AdditionalFiles.ManifestResourceName = File..txt
-                            build_metadata.AdditionalFiles.TargetSourceGenerator = Belp.CodeAnalysis.SourceGenerators.TreelikeResources.ResourceTreeGenerator
+                            build_metadata.AdditionalFiles.TargetSourceGenerator = Belp.CodeAnalysis.SourceGenerators.TreelikeResources.ResourcesTreeGenerator
                             """
                         ),
                     },
 
                     ExpectedDiagnostics =
                     {
-                        new DiagnosticResult(DiagnosticDescriptors.SourceGenerators.ResourceTreeGenerator.MRGN4005),
+                        new DiagnosticResult(DiagnosticDescriptors.SourceGenerators.ResourcesTreeGenerator.MRGN4005),
                     },
                 },
             };
