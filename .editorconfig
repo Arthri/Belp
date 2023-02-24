@@ -173,7 +173,7 @@ dotnet_diagnostic.IDE0035.severity = warning
 ## Order modifiers
 ## https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0036
 dotnet_diagnostic.IDE0036.severity = warning
-csharp_preferred_modifier_order = public, private, protected, internal, static, extern, new, virtual, abstract, sealed, override, readonly, unsafe, volatile, async
+csharp_preferred_modifier_order = public, private, protected, internal, file, static, extern, new, virtual, abstract, sealed, override, readonly, unsafe, required, volatile, async
 
 ## Use inferred member name
 ## https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0037
