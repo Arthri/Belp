@@ -1,5 +1,16 @@
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
+  <!-- Dependencies -->
+  <ItemGroup>
+    <!-- Microsoft.NET.Test.Sdk depends on 5.11.0, but MSBuild depends on >=6.4.0-->
+    <PackageReference Include="NuGet.Frameworks" Version="6.5.0" />
+
+    <ProjectReference Include="$(_InternalsDirectory)Belp.Tests.MSBuild.XUnit/Belp.Tests.MSBuild.XUnit.csproj" />
+  </ItemGroup>
+
+
+
+  <!-- Global Usings -->
   <ItemGroup>
     <Using Include="Belp.Tests.MSBuild.XUnit" />
     <Using Include="Microsoft.Build.Execution" />
@@ -8,18 +19,9 @@
 
 
 
+  <!-- Project Files -->
   <ItemGroup>
     <Compile Include="$(_InternalsDirectory)Belp.Private.MSBuildLoader\**\*.cs" Visible="false" />
-  </ItemGroup>
-
-
-
-  <!-- Dependencies -->
-  <ItemGroup>
-    <!-- Microsoft.NET.Test.Sdk depends on 5.11.0, but MSBuild depends on >=6.4.0-->
-    <PackageReference Include="NuGet.Frameworks" Version="6.5.0" />
-
-    <ProjectReference Include="$(_InternalsDirectory)Belp.Tests.MSBuild.XUnit/Belp.Tests.MSBuild.XUnit.csproj" />
   </ItemGroup>
 
 </Project>
