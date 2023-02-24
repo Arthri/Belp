@@ -22,6 +22,8 @@
     <_E_MissingCopyright>true</_E_MissingCopyright>
   </PropertyGroup>
 
+
+
   <Target Name="_CheckAutoCopyrightErrors" BeforeTargets="Build">
     <Warning Text="Copyright is defined but copyright generation is enabled" Condition="'$(_E_CopyrightRedundant)' == 'true'" />
     <Error Text="Initial publication must only compose of numerical digits(0123456789)" Condition="'$(_E_InvalidInitialPublication)' == 'true'" />
