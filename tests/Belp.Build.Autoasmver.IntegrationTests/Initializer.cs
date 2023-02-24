@@ -1,11 +1,9 @@
 ﻿using Microsoft.Build.Locator;
 using System.Runtime.CompilerServices;
 
-static file class Initializer
+file static class Initializer
 {
-#pragma warning disable CA2255 // The 'ModuleInitializer' attribute should not be used in libraries
     [ModuleInitializer]
-#pragma warning restore CA2255 // The 'ModuleInitializer' attribute should not be used in libraries
     public static void InitializeModule()
     {
         if (MSBuildLocator.IsRegistered)
