@@ -9,6 +9,13 @@
 
 
 
+  <!-- Package Configuration -->
+  <ItemGroup>
+    <Content Include="templates/**/*" Exclude="**/bin/**;**/obj/**;*.pdb;*.exe" />
+  </ItemGroup>
+
+
+
   <!-- Package Information -->
   <PropertyGroup>
     <Authors>Arthri</Authors>
@@ -19,12 +26,5 @@
     <Title>Belp Templates</Title>
     <Version>1.0.0.0</Version>
   </PropertyGroup>
-
-
-
-  <!-- Package Files -->
-  <ItemGroup>
-    <Content Include="templates/**/*" Exclude="**/bin/**;**/obj/**;*.pdb;*.exe" />
-  </ItemGroup>
 
 </Project>

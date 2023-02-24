@@ -1,15 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <!-- Package Information -->
+  <!-- Analyzer Options -->
   <PropertyGroup>
-    <Authors>Arthri</Authors>
-    <Description>Helper source generators for manifest or embedded resources.</Description>
-    <DevelopmentDependency>true</DevelopmentDependency>
-    <InitialPublication>2023</InitialPublication>
-    <PackageId>Belp.CodeAnalysis.ManifestResourceGenerators</PackageId>
-    <PackageTags>analyzers;csharp;codeanalysis;compiler;embedded;manifest;resource;sourcegenerator</PackageTags>
-    <Title>Manifest Resource Source Generators</Title>
-    <Version>0.0.1</Version>
+    <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
   </PropertyGroup>
 
 
@@ -26,13 +19,6 @@
   <!-- Compiler Options -->
   <PropertyGroup>
     <LangVersion>11.0</LangVersion>
-  </PropertyGroup>
-
-
-
-  <!-- Analyzer Options -->
-  <PropertyGroup>
-    <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
   </PropertyGroup>
 
 
@@ -69,6 +55,21 @@
 
 
 
+  <!-- Package Information -->
+  <PropertyGroup>
+    <Authors>Arthri</Authors>
+    <Description>Helper source generators for manifest or embedded resources.</Description>
+    <DevelopmentDependency>true</DevelopmentDependency>
+    <InitialPublication>2023</InitialPublication>
+    <PackageId>Belp.CodeAnalysis.ManifestResourceGenerators</PackageId>
+    <PackageTags>analyzers;csharp;codeanalysis;compiler;embedded;manifest;resource;sourcegenerator</PackageTags>
+    <Title>Manifest Resource Source Generators</Title>
+    <Version>0.0.1</Version>
+  </PropertyGroup>
+
+
+
+  <!-- Output Configuration -->
   <ItemGroup>
     <!-- Embed file to retrieve later and emit in consuming projects -->
     <EmbeddedResource Include="ManifestResourcesHelper.cs" />

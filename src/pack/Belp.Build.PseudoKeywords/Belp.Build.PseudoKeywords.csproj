@@ -8,6 +8,13 @@
 
 
 
+  <!-- Compile and pack C# files -->
+  <ItemGroup>
+    <Compile Include="**/*.cs" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" Pack="true" />
+  </ItemGroup>
+
+
+
   <!-- Package Information -->
   <PropertyGroup>
     <Authors>Arthri</Authors>
@@ -18,12 +25,5 @@
     <Title>Pseudo Keywords</Title>
     <Version>1.0.1</Version>
   </PropertyGroup>
-
-
-
-  <!-- Compile and pack C# files -->
-  <ItemGroup>
-    <Compile Include="**/*.cs" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" Pack="true" />
-  </ItemGroup>
 
 </Project>

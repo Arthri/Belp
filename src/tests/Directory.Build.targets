@@ -9,7 +9,7 @@
 
 
 
-  <!-- Copy files in Resources/**/* folder to output -->
+  <!-- Copy Resources\**\* to output -->
   <ItemGroup Condition="'$(EnableDefaultItems)' == 'true' And '$(EnableDefaultNoneItems)' == 'true'">
     <None Include="Resources\**\*proj" />
     <None Update="Resources\**\*" CopyToOutputDirectory="PreserveNewest" />

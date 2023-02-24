@@ -24,17 +24,6 @@
 
 
 
-  <!-- Add Global Usings -->
-  <ItemGroup>
-    <Using Include="Belp.Tests.Common" />
-    <Using Include="FluentAssertions" />
-    <Using Include="System.Collections" />
-    <Using Include="System.Text" />
-    <Using Include="Xunit" />
-  </ItemGroup>
-
-
-
   <!-- Dependencies -->
   <ItemGroup>
     <PackageReference Include="coverlet.collector" Version="3.1.2">
@@ -52,14 +41,25 @@
 
 
 
-  <!-- Configuration and Other Files -->
+  <!-- Global Usings -->
+  <ItemGroup>
+    <Using Include="Belp.Tests.Common" />
+    <Using Include="FluentAssertions" />
+    <Using Include="System.Collections" />
+    <Using Include="System.Text" />
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+
+
+  <!-- Output Configuration -->
   <ItemGroup>
     <Content Include="xunit.runner.json" Condition="Exists('xunit.runner.json')" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
 
 
-  <!-- Configure for specific test environments -->
+  <!-- Test Environment Configuration -->
   <PropertyGroup>
     <TestingMSBuild Condition="'$(TestingMSBuild)' == ''">$(MSBuildProjectName.StartsWith('Belp.Build.'))</TestingMSBuild>
     <TestingSourceGenerators Condition="'$(TestingSourceGenerators)' == ''">$(MSBuildProjectName.StartsWith('Belp.CodeAnalysis.'))</TestingSourceGenerators>
