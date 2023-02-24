@@ -1,0 +1,9 @@
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Target Name="_AddEmbeddedResourcesToAdditionalFiles" Condition="'$(ManifestResourceGenerators_DisableAutoEmbeddedResourcesInclude)' != 'true'" DependsOnTargets="PrepareResourceNames" AfterTargets="PrepareResourceNames" BeforeTargets="GenerateMSBuildEditorConfigFile;GenerateMSBuildEditorConfigFileShouldRun;BeforeCompile;Compile;CoreCompile">
+    <ItemGroup>
+      <AdditionalFiles Include="@(EmbeddedResource)" TargetSourceGenerator="Belp.CodeAnalysis.SourceGenerators.ManifestResourceGenerators.ManifestResourcesGenerator" />
+    </ItemGroup>
+  </Target>
+
+</Project>
