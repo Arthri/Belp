@@ -2,7 +2,7 @@
 
   <!-- Dependencies-->
   <ItemGroup>
-    <ProjectReference Include="$(_InternalsDirectory)Belp.Tests.CodeAnalysis.SourceGenerators/Belp.Tests.CodeAnalysis.SourceGenerators.csproj" />
+    <ProjectReference Include="$(_InternalLibrariesDirectory)Belp.Tests.CodeAnalysis.SourceGenerators/Belp.Tests.CodeAnalysis.SourceGenerators.csproj" />
   </ItemGroup>
 
 

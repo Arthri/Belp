@@ -25,7 +25,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp.SourceGenerators.Testing.XUnit" Version="1.1.2-beta1.22531.1" />
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.4.0" />
-    <ProjectReference Include="$(_InternalsDirectory)Belp.Tests.Common\Belp.Tests.Common.csproj" />
+    <ProjectReference Include="$(_InternalLibrariesDirectory)Belp.Tests.Common\Belp.Tests.Common.csproj" />
   </ItemGroup>
 
 </Project>

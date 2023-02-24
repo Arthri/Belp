@@ -5,7 +5,7 @@
     <!-- Microsoft.NET.Test.Sdk depends on 5.11.0, but MSBuild depends on >=6.4.0-->
     <PackageReference Include="NuGet.Frameworks" Version="6.5.0" />
 
-    <ProjectReference Include="$(_InternalsDirectory)Belp.Tests.MSBuild.XUnit/Belp.Tests.MSBuild.XUnit.csproj" />
+    <ProjectReference Include="$(_InternalLibrariesDirectory)Belp.Tests.MSBuild.XUnit/Belp.Tests.MSBuild.XUnit.csproj" />
   </ItemGroup>
 
 
@@ -21,7 +21,7 @@
 
   <!-- Project Files -->
   <ItemGroup>
-    <Compile Include="$(_InternalsDirectory)Belp.Private.MSBuildLoader\**\*.cs" Visible="false" />
+    <Compile Include="$(_InternalLibrariesDirectory)Belp.Private.MSBuildLoader\**\*.cs" Visible="false" />
   </ItemGroup>
 
 </Project>
