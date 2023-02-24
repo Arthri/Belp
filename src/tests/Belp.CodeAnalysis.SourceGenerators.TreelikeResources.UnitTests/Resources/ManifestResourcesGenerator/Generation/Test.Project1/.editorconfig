@@ -1,0 +1,19 @@
+﻿[/File1.txt]
+build_metadata.AdditionalFiles.ManifestResourceName = Test.Project1.File1.txt
+build_metadata.AdditionalFiles.TargetSourceGenerator = Belp.CodeAnalysis.SourceGenerators.TreelikeResources.ResourceTreeGenerator
+
+[/File2.txt]
+build_metadata.AdditionalFiles.ManifestResourceName = Test.Project1.File2.txt
+build_metadata.AdditionalFiles.TargetSourceGenerator = Belp.CodeAnalysis.SourceGenerators.TreelikeResources.ResourceTreeGenerator
+
+[/DirA/File3.txt]
+build_metadata.AdditionalFiles.ManifestResourceName = Test.Project1.DirA.File3.txt
+build_metadata.AdditionalFiles.TargetSourceGenerator = Belp.CodeAnalysis.SourceGenerators.TreelikeResources.ResourceTreeGenerator
+
+[/DirA/DirAA/File4.ini]
+build_metadata.AdditionalFiles.ManifestResourceName = Test.Project1.DirA.DirAA.File4.ini
+build_metadata.AdditionalFiles.TargetSourceGenerator = Belp.CodeAnalysis.SourceGenerators.TreelikeResources.ResourceTreeGenerator
+
+[/DirB/File5.txt]
+build_metadata.AdditionalFiles.ManifestResourceName = Test.Project1.DirB.File5.txt
+build_metadata.AdditionalFiles.TargetSourceGenerator = Belp.CodeAnalysis.SourceGenerators.TreelikeResources.ResourceTreeGenerator
