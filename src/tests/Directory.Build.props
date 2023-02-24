@@ -1,0 +1,71 @@
+<Project ToolsVersion="15.0" TreatAsLocalProperty="_DirectoryBuildPropsFile" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!-- Load higher Directory.Build.props if it exists -->
+  <PropertyGroup>
+    <_DirectoryBuildPropsFile>$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))</_DirectoryBuildPropsFile>
+  </PropertyGroup>
+
+  <Import Condition="Exists($(_DirectoryBuildPropsFile))" Project="$(_DirectoryBuildPropsFile)" />
+
+
+
+  <!-- Build Configuration -->
+  <PropertyGroup>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+
+
+  <!-- Compiler Configuration -->
+  <PropertyGroup>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+
+
+  <!-- Dependencies -->
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="3.1.2">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="FluentAssertions" Version="6.7.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.3.2" />
+    <PackageReference Include="xunit" Version="2.4.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+
+
+  <!-- Global Usings -->
+  <ItemGroup>
+    <Using Include="Belp.Tests.Common" />
+    <Using Include="FluentAssertions" />
+    <Using Include="System.Collections" />
+    <Using Include="System.Text" />
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+
+
+  <!-- Output Configuration -->
+  <ItemGroup>
+    <Content Include="xunit.runner.json" Condition="Exists('xunit.runner.json')" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+
+
+  <!-- Test Environment Configuration -->
+  <PropertyGroup>
+    <TestingMSBuild Condition="'$(TestingMSBuild)' == ''">$(MSBuildProjectName.StartsWith('Belp.Build.'))</TestingMSBuild>
+    <TestingSourceGenerators Condition="'$(TestingSourceGenerators)' == ''">$(MSBuildProjectName.StartsWith('Belp.CodeAnalysis.'))</TestingSourceGenerators>
+  </PropertyGroup>
+
+  <Import Project="Belp.Tests.MSBuild.XUnit.props" Condition="'$(TestingMSBuild)' == 'true'" />
+  <Import Project="Belp.Tests.CodeAnalysis.SourceGenerators.props" Condition="'$(TestingSourceGenerators)' == 'true'" />
+
+</Project>

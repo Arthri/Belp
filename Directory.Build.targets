@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <!-- Add placeholder file for target framework -->
-    <TfmSpecificPackageFile Condition="'$(AddTFMPlaceholder)' == 'true'" Include="$(MSBuildThisFileDirectory)assets/_._" PackagePath="lib/$(TargetFramework)/" Link="Assets/lib/$(TargetFramework)/%(Filename)%(Extension)" />
+    <TfmSpecificPackageFile Condition="'$(AddTFMPlaceholder)' == 'true'" Include="$(_BuildConfigurationDirectory)_._" PackagePath="lib/$(TargetFramework)/" Link="Assets/lib/$(TargetFramework)/%(Filename)%(Extension)" />
   </ItemGroup>
 
 

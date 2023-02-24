@@ -12,11 +12,11 @@
   <!-- Path Constants -->
   <PropertyGroup>
     <_TopLevelDirectory>$(MSBuildThisFileDirectory)</_TopLevelDirectory>
-    <_BuildConfigurationDirectory>$(MSBuildThisFileDirectory)build/</_BuildConfigurationDirectory>
-    <_SourcesDirectory>$(MSBuildThisFileDirectory)src/</_SourcesDirectory>
-    <_InternalsDirectory>$(MSBuildThisFileDirectory)src/internals/</_InternalsDirectory>
-    <_LibrariesDirectory>$(MSBuildThisFileDirectory)src/libraries/</_LibrariesDirectory>
-    <_SourcesPackDirectory>$(MSBuildThisFileDirectory)src/pack/</_SourcesPackDirectory>
+    <_SourcesDirectory>$(_TopLevelDirectory)src/</_SourcesDirectory>
+    <_BuildConfigurationDirectory>$(_SourcesDirectory)build/</_BuildConfigurationDirectory>
+    <_InternalLibrariesDirectory>$(_SourcesDirectory)internals/</_InternalLibrariesDirectory>
+    <_LibrariesDirectory>$(_SourcesDirectory)libraries/</_LibrariesDirectory>
+    <_SourcesPackDirectory>$(_SourcesDirectory)pack/</_SourcesPackDirectory>
   </PropertyGroup>
 
 
