@@ -9,7 +9,7 @@
 
   <!-- Dependencies -->
   <ItemGroup>
-    <ProjectReference Include="..\..\src\libraries\codeanalysis\Belp.CodeAnalysis.SourceGenerators.TreelikeResources\Belp.CodeAnalysis.SourceGenerators.TreelikeResources.csproj" />
+    <ProjectReference Include="$(_LibrariesDirectory)codeanalysis\sourcegenerators\Belp.CodeAnalysis.SourceGenerators.TreelikeResources\Belp.CodeAnalysis.SourceGenerators.TreelikeResources.csproj" />
   </ItemGroup>
 
 </Project>
