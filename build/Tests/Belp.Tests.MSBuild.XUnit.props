@@ -8,6 +8,12 @@
 
 
 
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)$(MSBuildThisFileName).Initializer.cs" Visible="false" />
+  </ItemGroup>
+
+
+
   <!-- Dependencies -->
   <ItemGroup>
     <ProjectReference Include="$(_InternalsDirectory)Belp.Tests.MSBuild.XUnit/Belp.Tests.MSBuild.XUnit.csproj" />
