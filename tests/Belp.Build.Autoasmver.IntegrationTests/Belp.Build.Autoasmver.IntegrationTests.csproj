@@ -5,4 +5,15 @@
     <TargetFramework>net7.0</TargetFramework>
   </PropertyGroup>
 
+
+
+  <!-- Copy Autoasmver Files -->
+  <PropertyGroup>
+    <AutoasmverPath>$(_SourcesPackDirectory)Belp.Build.Autoasmver\Assets\build\</AutoasmverPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="$(AutoasmverPath)_Package.targets" CopyToOutputDirectory="PreserveNewest" TargetPath="Resources\%(Filename)%(Extension)" />
+  </ItemGroup>
+
 </Project>
