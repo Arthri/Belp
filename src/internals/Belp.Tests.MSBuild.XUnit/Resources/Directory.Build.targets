@@ -1,6 +1,8 @@
 <!-- Intentionally not import higher Directory.Build.targets -->
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
-  <Import Project="_Package.targets" />
+  <Import Project="Tests.Build.targets" Condition="Exists('Tests.Build.targets')" />
+
+  <Import Project="_Package.targets" Condition="Exists('_Package.targets')" />
 
 </Project>

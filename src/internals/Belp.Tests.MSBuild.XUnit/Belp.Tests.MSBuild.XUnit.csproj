@@ -26,4 +26,11 @@
     <ProjectReference Include="$(_InternalsDirectory)Belp.Tests.Common\Belp.Tests.Common.csproj" />
   </ItemGroup>
 
+
+
+  <!-- Output Configuration -->
+  <ItemGroup>
+    <None Update="Resources/**/*" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
 </Project>

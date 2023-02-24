@@ -1,4 +1,8 @@
 <!-- Intentionally not import higher Directory.Build.props -->
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
+  <Import Project="Tests.Build.props" Condition="Exists('Tests.Build.props')" />
+
+  <Import Project="_Package.props" Condition="Exists('_Package.props')" />
+
 </Project>
