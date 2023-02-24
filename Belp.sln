@@ -9,15 +9,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Belp.Templates", "src\pack\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Belp.Build.PseudoKeywords", "src\pack\Belp.Build.PseudoKeywords\Belp.Build.PseudoKeywords.csproj", "{34F43422-4EA7-42C1-AB08-9BC622DCE061}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Belp.CodeAnalysis.SourceGenerators.TreelikeResources", "src\libraries\codeanalysis\Belp.CodeAnalysis.SourceGenerators.TreelikeResources\Belp.CodeAnalysis.SourceGenerators.TreelikeResources.csproj", "{5B56CB7F-8A34-4D81-8B82-B01FD0B8833C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Belp.CodeAnalysis.SourceGenerators.TreelikeResources", "src\libraries\codeanalysis\sourcegenerators\Belp.CodeAnalysis.SourceGenerators.TreelikeResources\Belp.CodeAnalysis.SourceGenerators.TreelikeResources.csproj", "{5B56CB7F-8A34-4D81-8B82-B01FD0B8833C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Belp.CodeAnalysis.SourceGenerators.TreelikeResources.UnitTests", "tests\Belp.CodeAnalysis.SourceGenerators.TreelikeResources.UnitTests\Belp.CodeAnalysis.SourceGenerators.TreelikeResources.UnitTests.csproj", "{059A03F7-2CA1-4CDA-A9BD-74A953B4668B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Belp.CodeAnalysis.SourceGenerators.TreelikeResources.UnitTests", "src\tests\Belp.CodeAnalysis.SourceGenerators.TreelikeResources.UnitTests\Belp.CodeAnalysis.SourceGenerators.TreelikeResources.UnitTests.csproj", "{059A03F7-2CA1-4CDA-A9BD-74A953B4668B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Belp.Tests.CodeAnalysis.SourceGenerators", "src\internals\Belp.Tests.CodeAnalysis.SourceGenerators\Belp.Tests.CodeAnalysis.SourceGenerators.csproj", "{5E421087-517E-4942-881A-53E674F7014E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Belp.Tests.MSBuild.XUnit", "src\internals\Belp.Tests.MSBuild.XUnit\Belp.Tests.MSBuild.XUnit.csproj", "{7AECE10B-AF95-42E7-8DCB-B03273509DC3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Belp.Build.Autoasmver.IntegrationTests", "tests\Belp.Build.Autoasmver.IntegrationTests\Belp.Build.Autoasmver.IntegrationTests.csproj", "{D83F96D7-5581-4091-9C7D-E99B7CE449AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Belp.Build.Autoasmver.IntegrationTests", "src\tests\Belp.Build.Autoasmver.IntegrationTests\Belp.Build.Autoasmver.IntegrationTests.csproj", "{D83F96D7-5581-4091-9C7D-E99B7CE449AC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Belp.Tests.Common", "src\internals\Belp.Tests.Common\Belp.Tests.Common.csproj", "{A84BDD2C-A917-4A1B-AF03-25DC030129B2}"
 EndProject
