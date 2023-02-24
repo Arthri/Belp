@@ -72,9 +72,6 @@
   <ItemGroup>
     <!-- Embed file to retrieve later and emit in consuming projects -->
     <EmbeddedResource Include="ManifestResourcesHelper.cs" />
-
-    <!-- Pack the source generator in the right place -->
-    <None Include="$(OutputPath)\$(AssemblyName).dll" Visible="false" Link="$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" />
   </ItemGroup>
 
 </Project>
