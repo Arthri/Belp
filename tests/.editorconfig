@@ -8,11 +8,3 @@
 ## Remove unnecessary expression value
 ## https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0058
 dotnet_diagnostic.IDE0058.severity = silent
-
-
-
-
-
-# Naming Rules
-## Async
-dotnet_naming_rule.async_naming_rule.severity = none
