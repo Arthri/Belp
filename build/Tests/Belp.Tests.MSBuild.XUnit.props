@@ -9,7 +9,7 @@
 
 
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)$(MSBuildThisFileName).Initializer.cs" Visible="false" />
+    <Compile Include="$(_InternalsDirectory)Belp.Private.MSBuildLoader\**\*.cs" Visible="false" />
   </ItemGroup>
 
 
