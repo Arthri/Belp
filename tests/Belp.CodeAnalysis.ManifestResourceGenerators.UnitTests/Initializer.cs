@@ -2,7 +2,7 @@
 
 namespace Belp.CodeAnalysis.ManifestResourceGenerators.UnitTests;
 
-internal class Initializer
+file static class Initializer
 {
     [ModuleInitializer]
     public static void Initialize()
