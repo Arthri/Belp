@@ -1,0 +1,13 @@
+{
+  "solution": {
+    "path": "Belp.sln",
+    "projects": [
+      "src\\internals\\Belp.Tests.Common\\Belp.Tests.Common.csproj",
+      "src\\internals\\Belp.Tests.MSBuild.XUnit\\Belp.Tests.MSBuild.XUnit.csproj",
+      "src\\pack\\Belp.Build.Autoasmver\\Belp.Build.Autoasmver.csproj",
+      "src\\pack\\Belp.Build.PseudoKeywords\\Belp.Build.PseudoKeywords.csproj",
+      "src\\pack\\Belp.Templates\\Belp.Templates.csproj",
+      "src\\tests\\Belp.Build.Autoasmver.IntegrationTests\\Belp.Build.Autoasmver.IntegrationTests.csproj"
+    ]
+  }
+}

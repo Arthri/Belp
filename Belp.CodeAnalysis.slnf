@@ -1,0 +1,11 @@
+{
+  "solution": {
+    "path": "Belp.sln",
+    "projects": [
+      "src\\internals\\Belp.Tests.CodeAnalysis.SourceGenerators\\Belp.Tests.CodeAnalysis.SourceGenerators.csproj",
+      "src\\internals\\Belp.Tests.Common\\Belp.Tests.Common.csproj",
+      "src\\libraries\\codeanalysis\\sourcegenerators\\Belp.CodeAnalysis.SourceGenerators.TreelikeResources\\Belp.CodeAnalysis.SourceGenerators.TreelikeResources.csproj",
+      "src\\tests\\Belp.CodeAnalysis.SourceGenerators.TreelikeResources.UnitTests\\Belp.CodeAnalysis.SourceGenerators.TreelikeResources.UnitTests.csproj"
+    ]
+  }
+}
