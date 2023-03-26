@@ -1,4 +1,11 @@
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project InitialTargets="_CheckAssemblyVersion" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!-- Determine if AssemblyVersion is already set -->
+  <Target Name="_CheckAssemblyVersion">
+    <Error Code="ASV4001" Condition="'$(AssemblyVersion)' != ''" Text="AssemblyVersion is already defined. Please uninstall or disable(set %24(Autoasmver_Disable) to true) the package to manually define AssemblyVersion." />
+  </Target>
+
+
 
   <!-- Modify AssemblyVersion -->
   <Target Condition="'$(Autoasmver_Disable)' != 'true'" Name="SetAssemblyVersion" AfterTargets="GetAssemblyVersion">
