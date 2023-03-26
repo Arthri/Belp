@@ -35,6 +35,17 @@ public class XUnitMSBuildLoggerAdapter : ITestOutputHelper, ILogger
 
     void ILogger.Initialize(IEventSource eventSource)
     {
+        Initialize(eventSource);
+    }
+
+    void ILogger.Shutdown()
+    {
+        Shutdown();
+    }
+
+    /// <inheritdoc />
+    public virtual void Initialize(IEventSource eventSource)
+    {
         eventSource.BuildFinished += (sender, e) => WriteLine(e.Message);
         eventSource.BuildStarted += (sender, e) => WriteLine(e.Message);
         eventSource.ErrorRaised += (sender, e) => WriteLine($"ERR {e.Code}: {e.Message}");
@@ -50,7 +61,8 @@ public class XUnitMSBuildLoggerAdapter : ITestOutputHelper, ILogger
         eventSource.WarningRaised += (sender, e) => WriteLine($"WRN {e.Code}: {e.Message}");
     }
 
-    void ILogger.Shutdown()
+    /// <inheritdoc />
+    public virtual void Shutdown()
     {
     }
 
