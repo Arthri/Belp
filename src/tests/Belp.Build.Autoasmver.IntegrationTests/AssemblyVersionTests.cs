@@ -1,5 +1,4 @@
-﻿using Microsoft.Build.Evaluation;
-using Microsoft.Build.Framework;
+﻿using Microsoft.Build.Framework;
 
 namespace Belp.Build.Autoasmver.IntegrationTests;
 
