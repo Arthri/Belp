@@ -1,4 +1,4 @@
-﻿namespace Belp.Build.Autoasmver.IntegrationTests;
+namespace Belp.Build.Autoasmver.IntegrationTests;
 
 public class AssemblyVersionTests : MSBuildTest
 {
@@ -14,5 +14,15 @@ public class AssemblyVersionTests : MSBuildTest
         ProjectPropertyInstance p_AssemblyVersion = result.ProjectStateAfterBuild.GetProperty("AssemblyVersion");
         p_AssemblyVersion.Should().NotBeNull();
         p_AssemblyVersion.EvaluatedValue.Should().Be("5.0.0.0");
+    }
+
+    [Fact]
+    public void Expect_AssemblyVersion_Not_Set()
+    {
+        BuildResult result = RequestBuild(Path.Combine(Resources.Path, "AssemblyVersionTests", "Test.DisabledGeneration", "Test.DisabledGeneration.csproj"));
+
+        ProjectPropertyInstance p_AssemblyVersion = result.ProjectStateAfterBuild.GetProperty("AssemblyVersion");
+        p_AssemblyVersion.Should().NotBeNull();
+        p_AssemblyVersion.EvaluatedValue.Should().Be("5.3.1.4");
     }
 }

@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Version>5.3.1.4</Version>
+    <Autoasmver_Disable>true</Autoasmver_Disable>
+  </PropertyGroup>
+
+</Project>
