@@ -9,7 +9,7 @@
 
   <!-- Import PseudoKeywords' Files to compilation -->
   <ItemGroup>
-    <Compile Include="$(_SourcesPackDirectory)Belp.Build.PseudoKeywords\**\*.cs" Exclude="$(_SourcesPackDirectory)**\bin\**;$(_SourcesPackDirectory)**\obj\**" LinkBase="PseudoKeywords\" />
+    <Compile Include="$(_SourcesPackDirectory)Belp.Build.PseudoKeywords\**\*.cs" Exclude="$(_SourcesPackDirectory)**\bin\**;$(_SourcesPackDirectory)**\obj\**" LinkBase="PseudoKeywords\" NuGetPackageId="Belp.Build.PseudoKeywords" />
   </ItemGroup>
 
 </Project>
