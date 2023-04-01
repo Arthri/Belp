@@ -22,8 +22,8 @@
   <!-- Project Files -->
   <ItemGroup>
     <Compile Include="$(_InternalLibrariesDirectory)Belp.Private.MSBuildLoader\**\*.cs" Visible="false" />
-    <None Include="$(TestPackageBuildFilesPath)\_Package.props" Condition="Exists('$(TestPackageBuildFilesPath)\_Package.props')" CopyToOutputDirectory="PreserveNewest" TargetPath="Resources\%(Filename)%(Extension)" />
-    <None Include="$(TestPackageBuildFilesPath)\_Package.targets" Condition="Exists('$(TestPackageBuildFilesPath)\_Package.targets')" CopyToOutputDirectory="PreserveNewest" TargetPath="Resources\%(Filename)%(Extension)" />
+    <None Include="$(TestPackageBuildFilesPath)\_Package.props" Condition="'$(TestPackageBuildFilesPath)' != '' And Exists('$(TestPackageBuildFilesPath)\_Package.props')" CopyToOutputDirectory="PreserveNewest" TargetPath="Resources\%(Filename)%(Extension)" />
+    <None Include="$(TestPackageBuildFilesPath)\_Package.targets" Condition="'$(TestPackageBuildFilesPath)' != '' And Exists('$(TestPackageBuildFilesPath)\_Package.targets')" CopyToOutputDirectory="PreserveNewest" TargetPath="Resources\%(Filename)%(Extension)" />
   </ItemGroup>
 
 </Project>
