@@ -5,4 +5,11 @@
     <TargetFramework>net7.0</TargetFramework>
   </PropertyGroup>
 
+
+
+  <!-- Import PseudoKeywords' Files to compilation -->
+  <ItemGroup>
+    <Compile Include="$(_SourcesPackDirectory)Belp.Build.PseudoKeywords\**\*.cs" Exclude="$(_SourcesPackDirectory)**\bin\**;$(_SourcesPackDirectory)**\obj\**" LinkBase="PseudoKeywords\" />
+  </ItemGroup>
+
 </Project>
