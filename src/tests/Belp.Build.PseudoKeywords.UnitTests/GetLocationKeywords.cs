@@ -15,7 +15,7 @@ public partial class GetLocationKeywords
     public void currentfile_is_FooX2Ecs()
     {
 #line 420 "Foo.cs"
-        currentfile().Should().BeEmpty().And.Be(GetFilePath());
+        currentfile().Should().NotBeEmpty().And.Be(GetFilePath());
 
         static string GetFilePath([CallerFilePath] string path = "")
         {
