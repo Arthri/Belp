@@ -108,6 +108,18 @@ public partial class RandomKeywords
             reulong.Should().BeInRange(ulong.MinValue, ulong.MaxValue - 1);
         }
 
+        [Fact]
+        public void rfloat_is_ge_0_and_lt_1()
+        {
+            rfloat.Should().BeGreaterThanOrEqualTo(0f).And.BeLessThan(1f);
+        }
+
+        [Fact]
+        public void rdouble_is_ge_0_and_lt_1()
+        {
+            rdouble.Should().BeGreaterThanOrEqualTo(0d).And.BeLessThan(1d);
+        }
+
         #endregion
 
 
@@ -278,6 +290,12 @@ public partial class RandomKeywords
         public void reuint64_is_ge_0_and_lt_18446744073709551615()
         {
             reuint64.Should().BeInRange(ulong.MinValue, ulong.MaxValue - 1);
+        }
+
+        [Fact]
+        public void rsingle_is_ge_0_and_lt_1()
+        {
+            rsingle.Should().BeGreaterThanOrEqualTo(0f).And.BeLessThan(1f);
         }
 
         #endregion
